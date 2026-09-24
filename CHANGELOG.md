@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.2 — 2026-09-24
+
+- Added optional macOS Keychain storage for the OpenRouter API key, with a local hidden prompt.
+- Kept environment-variable support for other systems and existing setups.
+
 ## 0.3.1 — 2026-09-24
 
 - Added OpenRouter as the supported optional Jev route in both skill editions.
