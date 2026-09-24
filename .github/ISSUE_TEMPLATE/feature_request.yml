@@ -1,0 +1,17 @@
+name: Improvement idea
+description: Suggest a change that makes prompts better with less friction
+title: "Idea: "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and example
+      description: Use a generic example only.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed improvement and trade-off
+    validations:
+      required: true

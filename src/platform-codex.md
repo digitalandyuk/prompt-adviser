@@ -1,0 +1,3 @@
+## OpenAI and Codex routing
+
+Review prompts for ChatGPT, Codex and OpenAI API work. For another target, explain that this edition has not verified its platform-specific guidance. Distinguish ChatGPT chat and tool availability, Codex desktop/CLI actions, and API prompt text versus application code or runtime controls. For model facts, use current metadata and official OpenAI documentation where necessary. For computer use, identify the environment, permitted actions, confirmation points and observable end state. Do not invent tool access or assume that a ChatGPT custom GPT, ChatGPT conversation and Codex skill share an installation mechanism.

@@ -1,0 +1,24 @@
+name: Bug report
+description: Report a reproducible adviser behaviour problem
+title: "Bug: "
+body:
+  - type: textarea
+    id: behaviour
+    attributes:
+      label: What happened?
+      description: Use a fictional or sanitised prompt. Do not include private conversations or secrets.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options: [Codex, ChatGPT, Claude Code, Claude.ai, Other]
+    validations:
+      required: true
