@@ -17,7 +17,7 @@ Example: `Use Prompt Adviser V2 to improve this prompt: Create a 12-second produ
 
 ## Jev
 
-Jev is an optional hosted service for structured decisions, such as routing, scoring and classification. It cannot replace the conversational model in ChatGPT, Codex or Claude. Prompt Adviser can recommend it where a repeated decision workflow warrants the extra setup. A live Jev call requires a TypeSafe API key and may incur API charges. See [Jev guidance](references/jev.md) and [TypeSafe's official setup](https://docs.typesafe.ai/introduction/quickstart). Installing TypeSafe's agent skill teaches a coding agent to build integrations; it does not activate Jev for this adviser.
+Jev is an optional hosted service for structured decisions, such as routing, scoring and classification. It cannot replace the conversational model in ChatGPT, Codex or Claude. Prompt Adviser recommends it only where repeated decisions warrant an extra service. The supported route is [OpenRouter's Decisions API](https://openrouter.ai/docs/guides/community/jev): no separate TypeSafe account is needed, but an OpenRouter key and billed account are required. The package includes a small [opt-in helper](integrations/jev_openrouter.py) and [fictional example](examples/jev-routing.json). It never calls Jev during an ordinary prompt review. See [Jev guidance](references/jev.md) for cost, privacy and use conditions.
 
 ## Develop
 

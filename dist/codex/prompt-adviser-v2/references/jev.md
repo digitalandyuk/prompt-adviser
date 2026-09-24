@@ -4,9 +4,13 @@ Jev is TypeSafe AI's hosted System One model. It accepts text or structured stat
 
 Consider Jev for a workflow with many repeated, bounded decisions: route a prompt to a specialist, score candidate source relevance, check a well-defined requirement, or classify a large batch. Keep the conversational model responsible for research, asking questions and composing the final prompt. A single subjective decision or a small prompt review rarely justifies an external call. Do not claim better research depth or prompt quality without testing that specific workflow.
 
-Official access requires a TypeSafe API key and a call to its hosted API. TypeSafe publishes an optional skill for building TypeSafe integrations in coding agents; installing that skill alone does not make a live Jev call possible. Consult current TypeSafe docs before recommending setup, pricing or availability. The September 2026 docs listed input at US$0.042 per million tokens, with output tokens uncharged; this can change. No API usage is presumed free. Do not fetch secrets or transmit private prompts during review. If live use is requested, disclose which text would leave the current environment and obtain the needed key and data-sharing decision.
+OpenRouter is a supported route. An OpenRouter API key can call `POST https://openrouter.ai/api/alpha/decisions` with model `typesafe/jev-1.13`; no separate TypeSafe account or key is required. The `~typesafe/jev-latest` alias follows new releases, while a pinned version supports reproducible thresholds. The endpoint is alpha, so check the official documentation before deployment. OpenRouter bills the account. On 24 September 2026 the model page listed US$0.042 per million input tokens and free output tokens; a response reports `usage.cost` in USD. Pricing may change. Do not assume API use is free or translate model pricing into workflow savings without measurement.
 
-TypeSafe says it does not train on customer input, but its service receives input and its privacy policy describes retention and US processing. Verify the current policy before sending sensitive data.
+The packaged [OpenRouter helper](../integrations/jev_openrouter.py) sends a prepared JSON state and typed questions only when called with `--send` and an `OPENROUTER_API_KEY` environment variable. See the fictional [example](../examples/jev-routing.json). It has no third-party Python dependencies and does not install a key, register an account, buy credits or make background calls. Keep the key out of the repository and chat. TypeSafe's optional coding-agent skill teaches agents to build integrations; installing it alone does not enable a live Jev call.
+
+At the adviser's first response at or above 80% completeness, discuss Jev only if it would help the intended later workflow. Do not send the user's draft to Jev during review. For a live call, the user must choose Jev and authorise the particular state sent. Use fictional, non-sensitive state for initial validation. OpenRouter routes that state to TypeSafe.
+
+OpenRouter says prompt retention is opt-in and off by default, but keeps usage metadata. TypeSafe receives the state and its policy describes retention and US processing. Verify both policies before sending sensitive data.
 
 Primary sources:
 - https://typesafe.ai/blog/introducing-system-one-models-and-jev
@@ -15,3 +19,8 @@ Primary sources:
 - https://docs.typesafe.ai/models
 - https://docs.typesafe.ai/agent-skill
 - https://typesafe.ai/legal/privacy-policy
+- https://openrouter.ai/docs/guides/community/jev
+- https://openrouter.ai/docs/guides/community/jev-tutorial
+- https://openrouter.ai/typesafe/jev-1.13/api
+- https://openrouter.ai/docs/guides/privacy/data-collection
+- https://openrouter.ai/docs/guides/privacy/provider-logging

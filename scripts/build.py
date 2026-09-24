@@ -27,6 +27,8 @@ def build(platform: str) -> None:
     header = f'---\nname: {NAME}\ndescription: "{description}"\n---\n\n'
     (folder / "SKILL.md").write_text(header + body + "\n" + appendix)
     copytree(ROOT / "references", folder / "references")
+    copytree(ROOT / "integrations", folder / "integrations")
+    copytree(ROOT / "examples", folder / "examples")
     if platform == "codex":
         (folder / "agents").mkdir()
         copy2(ROOT / "src/openai.yaml", folder / "agents/openai.yaml")

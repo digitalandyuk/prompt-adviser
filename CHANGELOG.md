@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.1 — 2026-09-24
+
+- Added OpenRouter as the supported optional Jev route in both skill editions.
+- Packaged a consent-gated, dependency-free Decisions API helper and fictional example.
+- Clarified that installing the skill does not create an OpenRouter key or enable paid calls.
+
 ## 0.3.0 — 2026-09-24
 
 - One shared source builds Codex and Claude editions.

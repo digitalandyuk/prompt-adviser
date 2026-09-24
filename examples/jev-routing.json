@@ -1,0 +1,17 @@
+{
+  "model": "typesafe/jev-1.13",
+  "state": {
+    "task": "Create a short product demonstration video showing a reusable water bottle in use."
+  },
+  "questions": {
+    "primary_workflow": {
+      "type": "choice",
+      "instructions": "Which workflow should handle this fictional task?",
+      "criteria": {
+        "video": "Create or edit moving visual footage.",
+        "image": "Create or edit a still image.",
+        "writing": "Draft or revise text."
+      }
+    }
+  }
+}

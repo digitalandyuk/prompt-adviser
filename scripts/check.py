@@ -18,6 +18,10 @@ for platform in ("codex", "claude"):
     assert "final item" in skill
     assert (folder / "references/prompt-sources.md").is_file()
     assert (folder / "references/jev.md").is_file()
+    assert (folder / "integrations/jev_openrouter.py").is_file()
+    assert (folder / "examples/jev-routing.json").is_file()
+    assert "OpenRouter is a supported route" in skill
+    compile((folder / "integrations/jev_openrouter.py").read_text(), "jev_openrouter.py", "exec")
     archive = ROOT / "dist" / f"{NAME}-{platform}.zip"
     with ZipFile(archive) as zf:
         assert zf.testzip() is None
