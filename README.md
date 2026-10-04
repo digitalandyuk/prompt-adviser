@@ -2,7 +2,7 @@
 
 An open-source skill that helps turn a draft request into a useful, executable prompt. It scores completeness, asks three focused questions per round, recommends an available model and ends with a copyable prompt. The reviewed task starts only when the user explicitly says **Run this prompt**.
 
-At the first response scoring at least 80%, the adviser checks whether an open-source prompt example or optional Jev workflow would improve the draft. Suggestions fit inside the normal three questions when another round is due. It remains useful without Jev, a prompt-library connection or any external account.
+At the first response scoring at least 80%, the adviser checks open-source prompt directories without being asked, offers a specific “Act as” role or **No role** where useful, and considers optional Jev for repeated structured decisions. Suggestions fit inside the normal three questions when another round is due. A live source lookup uses generic task terms, not the user's private draft. If browsing is unavailable, the adviser labels its curated offline check. Completeness measures coverage, not prompt quality.
 
 ## Install
 
@@ -11,6 +11,7 @@ Download the appropriate archive from [`dist/`](dist/) and unzip it. The archive
 - **Codex desktop or CLI:** copy that folder into `~/.codex/skills/`, then start a new session. Invoke `$prompt-adviser-v2` with a draft prompt.
 - **Claude Code:** copy that folder into `~/.claude/skills/`, then restart Claude Code. Invoke `/prompt-adviser-v2` or name the skill in a request.
 - **Claude.ai custom skills:** where your account offers skill uploads, upload the Claude ZIP through **Customize → Skills**. Availability and labels may vary by plan and product version.
+- **Google Antigravity:** copy the Antigravity folder into `~/.gemini/config/skills/`, then confirm that Antigravity discovers `prompt-adviser-v2`. This is the global skill location in [Google's Antigravity guide](https://codelabs.developers.google.com/getting-started-with-antigravity-skills); Gemini web and AI Studio use different mechanisms.
 - **ChatGPT:** ChatGPT conversations do not install a Codex skill directly. The Codex edition can still be used in Codex desktop, or its instructions can be adapted manually to a supported ChatGPT custom-instruction or GPT workflow. No automatic ChatGPT installation is claimed.
 
 Example: `Use Prompt Adviser V2 to improve this prompt: Create a 12-second product video for a new reusable water bottle.`
@@ -21,6 +22,6 @@ Jev is an optional hosted service for structured decisions, such as routing, sco
 
 ## Develop
 
-Edit `src/SKILL.template.md` for shared behaviour and a platform file for platform-specific guidance. Run `python3 scripts/build.py` and `python3 scripts/check.py`. Both skills and ZIPs are generated in `dist/`.
+Edit `src/SKILL.template.md` for shared behaviour and a platform file for platform-specific guidance. Run `python3 scripts/build.py` and `python3 scripts/check.py`. All three skills and ZIPs are generated in `dist/`.
 
 See [test cases](tests.md), [validation record](VALIDATION.md), [source and licence notes](THIRD_PARTY.md), [contribution guide](CONTRIBUTING.md) and [changelog](CHANGELOG.md). Contributions are welcome through Issues and pull requests; no prompts or usage data are sent automatically.

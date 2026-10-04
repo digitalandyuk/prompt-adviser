@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build installable Codex and Claude skills from one shared source."""
+"""Build installable Codex, Claude and Antigravity skills from one shared source."""
 
 from pathlib import Path
 from shutil import copy2, copytree, rmtree
@@ -11,6 +11,7 @@ NAME = "prompt-adviser-v2"
 DESCRIPTIONS = {
     "codex": "Review ChatGPT, OpenAI and Codex prompts. Score completeness, ask three score-led questions, suggest useful open-source examples and optional Jev, then recommend a model before execution.",
     "claude": "Review Claude prompts. Score completeness, ask three score-led questions, suggest useful open-source examples and optional Jev, then recommend a current Claude model before execution.",
+    "antigravity": "Review Google Antigravity prompts. Score completeness, ask three questions, check open-source examples and role choices at 80%, and finalise before execution.",
 }
 
 

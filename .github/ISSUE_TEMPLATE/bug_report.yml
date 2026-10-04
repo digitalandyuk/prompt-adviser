@@ -19,6 +19,6 @@ body:
     id: platform
     attributes:
       label: Platform
-      options: [Codex, ChatGPT, Claude Code, Claude.ai, Other]
+      options: [Codex, ChatGPT, Claude Code, Claude.ai, Antigravity, Other]
     validations:
       required: true

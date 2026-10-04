@@ -10,3 +10,5 @@ The skill's original text and build scripts are MIT licensed. It does not bundle
 - [TypeSafe Jev documentation](https://docs.typesafe.ai/) and [OpenRouter Jev documentation](https://openrouter.ai/docs/guides/community/jev): linked documentation, not bundled or relicensed. Jev is a hosted service with separate terms and pricing.
 
 Generic video-prompt structure in this release is original wording. A broader video prompt library can be added once its provenance, licence and quality are verified.
+
+The [OpenAI prompt-engineering](https://developers.openai.com/api/docs/guides/prompt-engineering), [Anthropic prompting](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices), [Google prompt-design](https://ai.google.dev/gemini-api/docs/prompting-strategies) and [Antigravity skill](https://codelabs.developers.google.com/getting-started-with-antigravity-skills) guides inform original guidance in this release. Their documentation is linked, not bundled or relicensed.
