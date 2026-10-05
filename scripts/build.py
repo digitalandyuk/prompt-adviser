@@ -7,7 +7,7 @@ from zipfile import ZIP_DEFLATED, ZipFile, ZipInfo
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
-NAME = "prompt-adviser-v2"
+NAME = "prompt-adviser"
 DESCRIPTIONS = {
     "codex": "Review ChatGPT, OpenAI and Codex prompts. Score completeness, ask three score-led questions, suggest useful open-source examples and optional Jev, then recommend a model before execution.",
     "claude": "Review Claude prompts. Score completeness, ask three score-led questions, suggest useful open-source examples and optional Jev, then recommend a current Claude model before execution.",

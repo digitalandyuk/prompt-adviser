@@ -16,3 +16,10 @@
 - Further Codex tests found and fixed two review defects: a source URL was cited without opening its page, and one question-round response included a finished prompt prematurely. The final image test performed a source-specific search, opened the Cookbook page, accurately said no excerpt was verified, asked three questions and did not produce the prompt or image.
 - A final fictional 20,000-ticket case opened an OpenAI Cookbook example, offered one attributed MIT-licensed evaluation pattern, kept **No role** out of the questions, and explained Jev as an optional classification service requiring an external API/key, billed usage and a data-sharing decision. It made no Jev call or ticket changes.
 - Native Claude Code testing could not start because its CLI reported `Not logged in`. No Antigravity app or CLI was available for a native test, and no updated edition was installed. Offline fallback, untrusted-source injection and actual prompt-output quality remain scenario specifications rather than live host results. No public release, installation or GitHub record was created.
+
+## 5 October 2026 naming update
+
+- Renamed the generated skill folder, frontmatter name, Codex display name, invocation examples and ZIPs to Prompt Adviser across Codex, Claude and Antigravity. Removed the old package paths from the release tree.
+- The release checker passed package and archive consistency. Ruby parsed all three skill frontmatters and the Codex interface file. A mocked Keychain lookup confirmed that the helper prefers the new account and can still find an earlier credential under the same service, without reading or printing a real key.
+- This is a packaging and compatibility check; native Claude and Antigravity behaviour remains unverified as recorded above.
+- The local Codex and Claude installations were replaced with the renamed packages and compared byte-for-byte with their generated folders. Their previous folders were moved to a temporary rollback backup. Antigravity was packaged but not locally installed because no existing installation was present.

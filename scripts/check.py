@@ -6,7 +6,7 @@ import re
 from zipfile import ZipFile
 
 ROOT = Path(__file__).resolve().parents[1]
-NAME = "prompt-adviser-v2"
+NAME = "prompt-adviser"
 shared_body = (ROOT / "src/SKILL.template.md").read_text()
 for platform in ("codex", "claude", "antigravity"):
     folder = ROOT / "dist" / platform / NAME
@@ -52,5 +52,14 @@ for path in ROOT.rglob("*"):
     data = path.read_text(errors="ignore")
     assert ("/" + "Users/") not in data, path
     assert re.search(r"ts_[A-Za-z0-9]{20,}", data) is None, path
+
+assert sorted(path.name for path in (ROOT / "dist").glob("*.zip")) == [
+    f"{NAME}-{platform}.zip" for platform in sorted(("codex", "claude", "antigravity"))
+], "Unexpected release archive in dist"
+for platform in ("codex", "claude", "antigravity"):
+    assert [path.name for path in (ROOT / "dist" / platform).iterdir()] == [NAME], platform
+for path in (ROOT / "README.md", ROOT / "src/SKILL.template.md", ROOT / "src/openai.yaml"):
+    data = path.read_text()
+    assert " V2" not in data and "-v2" not in data, path
 
 print("Release checks passed: all three skills, archives, references and public text")

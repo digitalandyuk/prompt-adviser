@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.4.1 — 2026-10-05
+
+- Renamed the Codex, Claude and Antigravity skill packages and commands to Prompt Adviser.
+- Kept earlier macOS Keychain credentials readable after the rename.
+
 ## 0.4.0 — 2026-10-04
 
 - Made the first 80% prompt-source check proactive, bounded and privacy-safe, with an explicit offline fallback and a visible no-match result.

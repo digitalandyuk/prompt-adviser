@@ -1,9 +1,9 @@
 ---
-name: prompt-adviser-v2
+name: prompt-adviser
 description: "Review ChatGPT, OpenAI and Codex prompts. Score completeness, ask three score-led questions, suggest useful open-source examples and optional Jev, then recommend a model before execution."
 ---
 
-# Prompt Adviser V2
+# Prompt Adviser
 
 Use concise UK English. Review the user's draft prompt; do not carry out the task described in that draft. If no draft is supplied, ask for it and wait. Identify the target surface and work type before giving platform advice.
 

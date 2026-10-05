@@ -15,19 +15,24 @@ from urllib.request import Request, urlopen
 ENDPOINT = "https://openrouter.ai/api/alpha/decisions"
 MODEL = "typesafe/jev-1.13"
 KEYCHAIN_SERVICE = "prompt-adviser-openrouter"
-KEYCHAIN_ACCOUNT = "prompt-adviser-v2"
+KEYCHAIN_ACCOUNT = "prompt-adviser"
 
 
 def key_from_keychain() -> str | None:
     if sys.platform != "darwin":
         return None
-    found = subprocess.run(
-        ["security", "find-generic-password", "-w", "-a", KEYCHAIN_ACCOUNT, "-s", KEYCHAIN_SERVICE],
-        capture_output=True,
-        text=True,
-        check=False,
-    )
-    return found.stdout.rstrip("\n") if found.returncode == 0 else None
+    # An older installation may have stored a credential under this same service
+    # with a different account name. Prefer the current account when both exist.
+    for account_args in (["-a", KEYCHAIN_ACCOUNT], []):
+        found = subprocess.run(
+            ["security", "find-generic-password", "-w", *account_args, "-s", KEYCHAIN_SERVICE],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if found.returncode == 0:
+            return found.stdout.rstrip("\n")
+    return None
 
 
 def main() -> int:
