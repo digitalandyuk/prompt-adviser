@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.5.0 — 2026-10-31
+
+- Added visible consistency, missing-context and excess-context diagnostics without changing the completeness calculation.
+- Added checks for varied, clearly labelled examples that agree with the prompt's rules.
+- Adapted guidance to model/version, surface, tools and thinking mode, with model-specific exceptions.
+- Added structured final prompts, delimited source material, factual-honesty defaults and long-context ordering.
+- Strengthened agent briefs with bounded persistence, verification, unattended fallback and honest completion reporting.
+- Preserved three questions, the automatic 80% source/role/Jev checkpoint, user choice and the explicit execution boundary across all three editions.
+- Replaced an unconditional Jev/OpenRouter compatibility claim in the shared instructions with a current-verification requirement.
+
 ## 0.4.1 — 2026-10-05
 
 - Renamed the Codex, Claude and Antigravity skill packages and commands to Prompt Adviser.

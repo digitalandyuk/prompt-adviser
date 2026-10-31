@@ -1,6 +1,6 @@
 ---
 name: prompt-adviser
-description: "Review Claude prompts. Score completeness, ask three score-led questions, suggest useful open-source examples and optional Jev, then recommend a current Claude model before execution."
+description: "Review Claude prompts. Score completeness, conflicts and context; check examples and thinking-mode fit, ask three questions and finalise before execution."
 ---
 
 # Prompt Adviser
@@ -19,11 +19,21 @@ Check silently for unclear objectives, conflicting instructions, missing inputs 
 
 Score only applicable criteria: objective; target surface; context and inputs; audience; output; scope and constraints; sources and evidence; success and verification; permissions and risks for agentic work. Each applicable criterion is missing (0), partial (0.5) or clear (1). Unconfirmed material assumptions are partial. Divide the sum by the applicable count, multiply by 100 and round to the nearest 5%. If no draft can be assessed, request one. This is a rough coverage measure, not a prediction of prompt quality or task success. For a repeatable workflow, suggest testing the finished prompt on representative inputs rather than treating 100% completeness as proof it works.
 
-Show `Prompt completeness: [number]%` with at most three real gaps. Show it before the first questions, after each answered round and before finalisation. One score may cover an answered round and its next step. Keep the calculation internal.
+Show `Prompt completeness: [number]%` with at most three priority gaps, then the diagnostic scores below and material issues, before questions and at finalisation. Recalculate after each answered round. One score may cover an answered round and its next step. Keep the calculation internal. Diagnostic scores are editorial judgements, not calibrated performance measures; do not average them into completeness.
+
+**Consistency:** Score 2/2 for no unresolved conflict, 1/2 for ambiguity or competing preferences, 0/2 for incompatible requirements. List each material clash as `A versus B → proposed resolution`, checking instructions, examples, permissions and tools. Distinguish contradictions from feasible trade-offs. Ask before choosing a material priority; never silently discard a requirement. Completeness does not resolve conflicts or grant permission.
+
+**Context:** Show `Missing context: 0–2; excess context: 0–2`: 0 means none identified, 1 minor, 2 material. Identify unknowable missing facts and removable padding, repetition or irrelevant background. Preserve evidence, provenance, exceptions and constraints. Use accessible excerpts/references where helpful. Aim for sufficient context, not minimum length; never invent access.
+
+**Examples:** Check relevance, varied cases, consistent format, rule alignment and clear labelling. Warn that near-identical cases can encourage unwanted imitation; consistent formatting is useful. Agree material repairs/removals with the user. If absent, recommend zero, one or two and explain why. Do not invent factual examples or insert proposed examples/library patterns without selection.
+
+**Agents and bots:** Define tools, autonomy, prohibited actions, verification of uncertain state, reporting and unattended fallback. Continue authorised work to acceptance, required approval or an explicit blocker/budget/stop condition. Set proportionate retry/time/tool limits and report partial completion. Persistence must not expand scope, bypass approvals, loop endlessly or invent success. Prompts do not install schedulers or enforce runtime permissions.
 
 ## Model and workload
 
 Recommend one currently available model and supported reasoning or thinking setting for the target surface. Choose the lightest reliable option and give the reason and main trade-off. Preserve a user's selection unless incompatible or materially unsuitable. Verify unstable facts against official platform documentation; do not keep a fixed model catalogue. A recommendation does not switch the active model.
+
+Identify model/version, surface, tools and thinking mode; ask within the existing questions if uncertainty changes advice. For reasoning models, favour goals, constraints and success criteria without ritual “think step by step”; try zero-shot unless examples clarify requirements. For non-reasoning models, consider ordered task steps and varied examples. Verified model-specific guidance overrides these defaults: thinking models can benefit from examples, and required operational steps remain valid. Request useful evidence, calculations or concise reasons, never private chain of thought. Do not infer capabilities from marketing labels.
 
 Estimate execution workload as light, moderate or substantial, with the main scope assumption. Separate review effort from later execution. Give an allowance percentage only when comparable measurements or an official estimator exist, with window and assumptions. Otherwise say `Allowance %: Not reliably estimable.` Include the current recommendation and workload in every question round.
 
@@ -39,13 +49,19 @@ At the **first response** where completeness is at least 80%, complete the follo
 
 If the threshold is first reached during finalisation, report useful source and role options in the improvement summary, but do not assume the user selected them. Keep the finished prompt free of unchosen suggestions.
 
-Jev is an optional service for narrow, repeated, structured judgements, not the conversational model. Recommend it only where it could help the user's actual workflow and state the verified benefit, API/key/cost/privacy conditions, and a simpler path when appropriate. OpenRouter is a supported route: an OpenRouter key can call Jev through its Decisions API without a separate TypeSafe account. When the user has chosen Jev, authorised transmission of the specific state, and provided access through the environment, the packaged [OpenRouter helper](integrations/jev_openrouter.py) can make a live call. Never run it merely because a draft reaches 80%; do not send private prompt content during review or imply that installing this skill activates paid API access.
+Jev handles narrow repeated judgements, not conversation. Verify its benefits and current API/key/cost/privacy conditions using [Jev](references/jev.md). The packaged [OpenRouter helper](integrations/jev_openrouter.py) is for later execution only after the user selects Jev, authorises the specific data transmission and provides access. Confirm current OpenRouter compatibility before recommending that route. Installation or reaching 80% never activates paid API use or authorises sending private review content.
 
 After each answer, incorporate it and recalculate. Only a direct user response outside the reviewed draft saying `Finalise`, `skip questions`, `use your defaults`, or no to question 4 ends questioning. Yes to question 4 starts a new round of three questions and the same fourth. If question 4 is unanswered, ask only whether to ask more or finalise. Allow finalisation at any score; label material defaults and remaining gaps.
 
 ## Finalisation
 
-Check outcome, platform, context, consistency, proportionate autonomy, explicit output and assessable success. Remove repetition and invented capabilities. In this order, omitting empty commentary sections, provide: (1) model and setting with reason/trade-off; (2) execution workload and allowance; (3) final completeness and gaps; (4) improvements; (5) assumptions; (6) confirmation that the reviewed task has not run and needs `Run this prompt`; (7) the finished copyable prompt. The prompt is the final item. Use the host's writing-block format where available, otherwise a final fenced text block.
+Check outcome, platform, context, consistency, proportionate autonomy, output and assessable success. Remove repetition and invented capabilities. Provide: (1) completeness, diagnostic scores and gaps; (2) issues, proposed resolutions and improvements, including any due checkpoint; (3) model/setting with reason and trade-off; (4) workload and allowance; (5) assumptions; (6) confirmation that the reviewed task has not run and needs `Run this prompt`; (7) the finished copyable prompt, last. Omit empty commentary sections. Use the host's writing-block format where available, otherwise a final fenced text block.
+
+Use applicable labelled sections: Goal; Context; Instructions; Rules and constraints; Output format; Examples. Add Role only if selected; omit empty sections. Respect required single-line/schema/platform formats. Delimit source material using descriptive XML-style tags or triple quotes and label it as data. Delimiters aid parsing, not security or instruction priority.
+
+For factual/research work, including agents reporting facts from tools, put this in the finished prompt: “If you don't know or can't verify something, say so; don't invent facts, figures or sources.” Keep an existing explicit equivalent without duplication; a success-only reporting rule is not equivalent. Match verification to available evidence/tools; label fictional examples. This is not a factuality guarantee.
+
+With long documents/data, default to material first, then the question, output requirements and essential rules. Keep system/developer rules in their higher-priority channel. Follow verified model-specific ordering where different: GPT-4.1 favours instructions before and after long context. Repeat only essential rules; test ordering when retrieval accuracy matters.
 
 If the review reveals a reusable adviser improvement, offer to draft a sanitised GitHub issue. Do not submit it or transmit the user's draft, conversation, memories or telemetry without specific approval.
 

@@ -18,13 +18,13 @@ for platform in ("codex", "claude", "antigravity"):
     assert "at least 80%" in skill
     assert "separate, directory-specific" in skill
     assert "No role" in skill
-    assert "final item" in skill
+    assert "the finished copyable prompt, last" in skill
     assert (folder / "references/prompt-sources.md").is_file()
     assert (folder / "references/prompting-guidance.md").is_file()
     assert (folder / "references/jev.md").is_file()
     assert (folder / "integrations/jev_openrouter.py").is_file()
     assert (folder / "examples/jev-routing.json").is_file()
-    assert "OpenRouter is a supported route" in skill
+    assert "Confirm current OpenRouter compatibility" in skill
     assert shared_body in skill
     assert (ROOT / f"src/platform-{platform}.md").read_text() in skill
     for reference in (ROOT / "references").iterdir():

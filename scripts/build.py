@@ -9,9 +9,9 @@ ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
 NAME = "prompt-adviser"
 DESCRIPTIONS = {
-    "codex": "Review ChatGPT, OpenAI and Codex prompts. Score completeness, ask three score-led questions, suggest useful open-source examples and optional Jev, then recommend a model before execution.",
-    "claude": "Review Claude prompts. Score completeness, ask three score-led questions, suggest useful open-source examples and optional Jev, then recommend a current Claude model before execution.",
-    "antigravity": "Review Google Antigravity prompts. Score completeness, ask three questions, check open-source examples and role choices at 80%, and finalise before execution.",
+    "codex": "Review ChatGPT, OpenAI and Codex prompts. Score completeness, conflicts and context; check examples and model fit, ask three questions and finalise before execution.",
+    "claude": "Review Claude prompts. Score completeness, conflicts and context; check examples and thinking-mode fit, ask three questions and finalise before execution.",
+    "antigravity": "Review Google Antigravity prompts. Score completeness, conflicts and context; check examples and model fit, ask three questions and finalise before execution.",
 }
 
 
