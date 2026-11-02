@@ -12,3 +12,5 @@ The skill's original text and build scripts are MIT licensed. It does not bundle
 Generic video-prompt structure in this release is original wording. A broader video prompt library can be added once its provenance, licence and quality are verified.
 
 The [OpenAI prompt-engineering](https://developers.openai.com/api/docs/guides/prompt-engineering), [Anthropic prompting](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices), [Google prompt-design](https://ai.google.dev/gemini-api/docs/prompting-strategies) and [Antigravity skill](https://codelabs.developers.google.com/getting-started-with-antigravity-skills) guides inform original guidance in this release. Their documentation is linked, not bundled or relicensed.
+
+The [tool execution guide](references/tool-execution.md) links current OpenAI, Anthropic and Google tool-calling documentation checked on 2 November 2026. Its decision guidance and example are original wording; no third-party code or benchmark percentages are bundled.

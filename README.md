@@ -1,8 +1,12 @@
 # Prompt Adviser
 
+Current release: **0.6.0**, 2 November 2026. See the [changelog](CHANGELOG.md) and [validation record](VALIDATION.md).
+
 An open-source skill that helps turn a draft request into a useful, executable prompt. It scores completeness, asks three focused questions per round, recommends an available model and ends with a copyable prompt. The reviewed task starts only when the user explicitly says **Run this prompt**.
 
 It also checks contradictory instructions, missing or excessive context, example quality and model/thinking-mode fit. Finished prompts use applicable labelled sections, evidence and uncertainty rules, and proportionate agent boundaries. Consistency is scored out of 2 (higher is clearer); missing and excess context each use 0–2 (lower is better). These are editorial diagnostics, not measured performance predictions, and are not averaged into completeness.
+
+For tool-heavy tasks, it conditionally recommends an execution plan: selective retrieval, independent parallel reads, or programmatic processing where the target host exposes eligible tools to code. It preserves evidence, coverage and approvals, retains working MCP integrations and falls back to direct calls. Simple no-tool tasks receive no extra optimisation section. This is advice for later execution, not a new runtime, app connection or guarantee of token savings. See [tool execution guidance](references/tool-execution.md) for platform limits and measurement caveats.
 
 At the first response scoring at least 80%, the adviser checks open-source prompt directories without being asked, offers a specific “Act as” role or **No role** where useful, and considers optional Jev for repeated structured decisions. Suggestions fit inside the normal three questions when another round is due. A live source lookup uses generic task terms, not the user's private draft. If browsing is unavailable, the adviser labels its curated offline check. Completeness measures coverage, not prompt quality.
 

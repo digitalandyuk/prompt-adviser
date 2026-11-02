@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.6.0 — 2026-11-02
+
+- Added conditional tool execution advice without a separate score, question round or mandatory output section.
+- Covers selective retrieval, safe parallel reads, bounded programmatic orchestration, preserved MCP integrations, evidence coverage and failure/approval boundaries.
+- Distinguishes target-host support from vendor API capabilities and unmeasured savings from observed token/call/latency results.
+- Keeps detailed guidance in a conditional reference shared by all three editions; simple no-tool prompts retain the existing review flow.
+
 ## 0.5.0 — 2026-10-31
 
 - Added visible consistency, missing-context and excess-context diagnostics without changing the completeness calculation.

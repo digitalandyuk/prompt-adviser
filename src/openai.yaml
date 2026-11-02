@@ -1,6 +1,6 @@
 interface:
   display_name: "Prompt Adviser"
-  short_description: "Check prompt coverage, conflicts, context and model fit"
+  short_description: "Improve prompts, model fit and tool execution plans"
   default_prompt: "Use $prompt-adviser to review my ChatGPT, OpenAI or Codex draft. Ask three score-led questions plus 'Shall I ask more?' and put the copyable prompt last."
 
 policy:
