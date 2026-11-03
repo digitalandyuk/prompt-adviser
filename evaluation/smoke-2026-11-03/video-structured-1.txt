@@ -1,0 +1,12 @@
+Create a 12-second, 9:16 video for a fictional reusable-bottle campaign aimed at UK commuters.
+
+Before generation, request the product reference image. Use it to match the same blue bottle and existing NORTH label throughout. Do not generate until the reference is supplied.
+
+Use these exact timed shots:
+0–4 seconds: The bottle is packed in a work bag.
+4–8 seconds: A commuter drinks from the bottle.
+8–12 seconds: The bottle sits on a desk, with a gentle camera push-in.
+
+Maintain consistent bottle shape, blue colour and NORTH label across all three shots, matching the supplied reference. Add no new text, logos or environmental claims.
+
+Include restrained ambient music only if audio generation support has been verified for the selected generator. Otherwise, generate without a soundtrack.

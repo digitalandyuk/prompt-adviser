@@ -1,0 +1,5 @@
+INV-042 is blocked: it is marked Draft, and the customer policy requires a purchase-order reference that is missing. Adding the PO or finalising the invoice requires your specific approval.
+
+No PDF has been downloaded. This planning-only task supplies no browser tools and prohibits tool use or file creation, so I cannot complete the download or save progress to TASKS.md.
+
+To proceed, supply the PO reference and approve updating and finalising INV-042. Downloading the local PDF is already authorised; sending or publishing is not.

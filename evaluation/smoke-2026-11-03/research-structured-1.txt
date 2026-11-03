@@ -1,0 +1,16 @@
+Vendor B is the only vendor that meets both mandatory requirements on the supplied evidence.
+
+| Vendor | Current annual price | Users | Policy result |
+|---|---:|---:|---|
+| A | £18,000 | 40 | Fails both requirements |
+| B | £14,000 | 50 | Meets both requirements |
+
+Supporting passages and dates:
+
+- **Policy, section 2, date not supplied:** “minimum 50 users, annual budget GBP 15,000, both mandatory”.
+- **Approved procurement note, 10 May:** A’s “revised quote is GBP 18,000 per year for 40 users”; B’s “binding quote is GBP 14,000 for 50 users”.
+- **Draft memo, 1 May:** A “costs GBP 12,000 per year, covers 50 users and was marked preferred”. The supplied facts explicitly state that the approved note supersedes the draft prices. The later approved quote also establishes A’s current capacity as 40 users, so its earlier preferred status does not establish compliance.
+
+**Recommendation:** Select Vendor B on price and capacity, subject to verifying implementation costs before commitment. Its quoted annual price is £1,000 below the budget.
+
+**Unverified:** Implementation costs and reliability cannot be assessed because no data is available. Total first-year cost therefore cannot be verified.

@@ -3,6 +3,7 @@
 Maintenance backlog only. Do not load in ordinary prompt review.
 
 - Calibrate completeness scores and question value against real user outcomes.
+- Extend the opt-in fictional task-output comparison set to repeated, blind-graded native-host tests using actual adviser-generated prompts, equivalent information and representative user outcomes. Curated prompt-pair smoke results are not an end-to-end adviser benchmark.
 - Compare direct and programmatic tool-execution plans on supported native hosts using equivalent scope, evidence and success criteria. Measure billed tokens, tool calls, latency, failures and setup overhead before claiming efficiency gains; do not install monitoring automatically.
 - Compare optional Jev-assisted routing or batch scoring with the conversational model on the same tasks, measuring quality, latency, API spend and privacy impact.
 - Add more source libraries or media examples only after verifying licence scope and practical quality.

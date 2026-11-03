@@ -1,0 +1,192 @@
+[
+  {
+    "case": "research",
+    "variant": "rough",
+    "repeat": 1,
+    "exit_code": 0,
+    "output": "research-rough-1.txt",
+    "output_present": true,
+    "usage": [
+      {
+        "input_tokens": 24597,
+        "cached_input_tokens": 12288,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 130,
+        "reasoning_output_tokens": 0
+      }
+    ],
+    "tool_item_types": [],
+    "elapsed_seconds": 10.38
+  },
+  {
+    "case": "research",
+    "variant": "structured",
+    "repeat": 1,
+    "exit_code": 0,
+    "output": "research-structured-1.txt",
+    "output_present": true,
+    "usage": [
+      {
+        "input_tokens": 24654,
+        "cached_input_tokens": 24448,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 281,
+        "reasoning_output_tokens": 0
+      }
+    ],
+    "tool_item_types": [],
+    "elapsed_seconds": 39.21
+  },
+  {
+    "case": "image",
+    "variant": "rough",
+    "repeat": 1,
+    "exit_code": 0,
+    "output": "image-rough-1.txt",
+    "output_present": true,
+    "usage": [
+      {
+        "input_tokens": 21267,
+        "cached_input_tokens": 12288,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 165,
+        "reasoning_output_tokens": 0
+      }
+    ],
+    "tool_item_types": [],
+    "elapsed_seconds": 13.43
+  },
+  {
+    "case": "image",
+    "variant": "structured",
+    "repeat": 1,
+    "exit_code": 0,
+    "output": "image-structured-1.txt",
+    "output_present": true,
+    "usage": [
+      {
+        "input_tokens": 21337,
+        "cached_input_tokens": 12288,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 93,
+        "reasoning_output_tokens": 0
+      }
+    ],
+    "tool_item_types": [],
+    "elapsed_seconds": 8.22
+  },
+  {
+    "case": "video",
+    "variant": "rough",
+    "repeat": 1,
+    "exit_code": 0,
+    "output": "video-rough-1.txt",
+    "output_present": true,
+    "usage": [
+      {
+        "input_tokens": 21284,
+        "cached_input_tokens": 12288,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 170,
+        "reasoning_output_tokens": 0
+      }
+    ],
+    "tool_item_types": [],
+    "elapsed_seconds": 11.76
+  },
+  {
+    "case": "video",
+    "variant": "structured",
+    "repeat": 1,
+    "exit_code": 0,
+    "output": "video-structured-1.txt",
+    "output_present": true,
+    "usage": [
+      {
+        "input_tokens": 21338,
+        "cached_input_tokens": 12288,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 183,
+        "reasoning_output_tokens": 17
+      }
+    ],
+    "tool_item_types": [],
+    "elapsed_seconds": 10.41
+  },
+  {
+    "case": "coding",
+    "variant": "rough",
+    "repeat": 1,
+    "exit_code": 0,
+    "output": "coding-rough-1.txt",
+    "output_present": true,
+    "usage": [
+      {
+        "input_tokens": 21324,
+        "cached_input_tokens": 19712,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 95,
+        "reasoning_output_tokens": 0
+      }
+    ],
+    "tool_item_types": [],
+    "elapsed_seconds": 7.29
+  },
+  {
+    "case": "coding",
+    "variant": "structured",
+    "repeat": 1,
+    "exit_code": 0,
+    "output": "coding-structured-1.txt",
+    "output_present": true,
+    "usage": [
+      {
+        "input_tokens": 21381,
+        "cached_input_tokens": 19712,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 73,
+        "reasoning_output_tokens": 0
+      }
+    ],
+    "tool_item_types": [],
+    "elapsed_seconds": 6.84
+  },
+  {
+    "case": "computer-use",
+    "variant": "rough",
+    "repeat": 1,
+    "exit_code": 0,
+    "output": "computer-use-rough-1.txt",
+    "output_present": true,
+    "usage": [
+      {
+        "input_tokens": 21285,
+        "cached_input_tokens": 12288,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 109,
+        "reasoning_output_tokens": 0
+      }
+    ],
+    "tool_item_types": [],
+    "elapsed_seconds": 8.81
+  },
+  {
+    "case": "computer-use",
+    "variant": "structured",
+    "repeat": 1,
+    "exit_code": 0,
+    "output": "computer-use-structured-1.txt",
+    "output_present": true,
+    "usage": [
+      {
+        "input_tokens": 21396,
+        "cached_input_tokens": 12288,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 286,
+        "reasoning_output_tokens": 0
+      }
+    ],
+    "tool_item_types": [],
+    "elapsed_seconds": 11.85
+  }
+]

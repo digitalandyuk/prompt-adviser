@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.7.0 — 2026-11-03
+
+- Adds a model-specific audit of inherited thinking, blanket tool-use and repeated self-check instructions while preserving acceptance evidence and approval gates.
+- Defaults to one agent, with conditional guidance for useful delegation, bounded handoffs and progressive loading of relevant skills/tools.
+- Adds resumable progress guidance for long tasks without claiming to install memory, runtime continuations or permission enforcement.
+- Strengthens document grounding, scoped cross-app dependency discovery, concrete creative direction and finished-file/destination requirements.
+- Adds five fictional rough/structured task pairs and a manual opt-in comparison runner, separate from multi-turn adviser tests and native-host validation.
+- Preserves completeness/diagnostic scores, three questions, automatic 80% source/role/Jev checkpoint, optional choices and the explicit execution boundary across all three editions. Performance gains remain unmeasured.
+
 ## 0.6.0 — 2026-11-02
 
 - Added conditional tool execution advice without a separate score, question round or mandatory output section.

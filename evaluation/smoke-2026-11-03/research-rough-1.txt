@@ -1,0 +1,10 @@
+Choose Vendor B. Its binding quote meets both mandatory requirements.
+
+| Vendor | Annual cost | Users | Meets policy? |
+|---|---:|---:|---|
+| A | £18,000 | 40 | No: £3,000 over budget and 10 users short |
+| B | £14,000 | 50 | Yes: £1,000 within budget |
+
+The approved 10 May note supersedes the draft prices. Vendor A’s earlier preferred status does not overcome its failure to meet either mandatory requirement.
+
+This recommendation is based on price and user coverage. Implementation costs and reliability remain unknown.

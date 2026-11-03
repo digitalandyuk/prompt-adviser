@@ -1,0 +1,14 @@
+```python
+def select_latest(records):
+    latest = {}
+    for record in records:
+        record_id = record["id"]
+        if (
+            record_id not in latest
+            or record["revision"] > latest[record_id]["revision"]
+        ):
+            latest[record_id] = record
+    return list(latest.values())
+```
+
+Preserves first-appearance order, keeps the first record on revision ties and does not mutate the input.

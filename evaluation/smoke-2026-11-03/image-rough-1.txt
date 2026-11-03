@@ -1,0 +1,5 @@
+Create a modern, square-format advert for a fictional bottle brand aimed at UK commuters. Use the supplied reference photo as the exact product reference: preserve the bottle’s geometry, blue colour and printed NORTH label faithfully.
+
+Photograph the bottle as the hero product, upright on a pale cyan surface against a matching pale cyan background. Use crisp natural daylight, clean highlights, realistic material detail and a defined soft-edged shadow. Frame from a slightly low angle with generous negative space for a confident, contemporary feel. Add a subtle commuter cue through a softly blurred edge of a charcoal work bag in the background, keeping the bottle dominant and the label sharp and readable.
+
+Premium commercial product photography, restrained styling, fresh colour, precise focus. No extra text, altered branding, environmental claims, purple gradients or floating UI cards.

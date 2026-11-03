@@ -1,6 +1,6 @@
 # Prompt Adviser
 
-Current release: **0.6.0**, 2 November 2026. See the [changelog](CHANGELOG.md) and [validation record](VALIDATION.md).
+Current release: **0.7.0**, 3 November 2026. See the [changelog](CHANGELOG.md) and [validation record](VALIDATION.md).
 
 An open-source skill that helps turn a draft request into a useful, executable prompt. It scores completeness, asks three focused questions per round, recommends an available model and ends with a copyable prompt. The reviewed task starts only when the user explicitly says **Run this prompt**.
 
@@ -9,6 +9,8 @@ It also checks contradictory instructions, missing or excessive context, example
 For tool-heavy tasks, it conditionally recommends an execution plan: selective retrieval, independent parallel reads, or programmatic processing where the target host exposes eligible tools to code. It preserves evidence, coverage and approvals, retains working MCP integrations and falls back to direct calls. Simple no-tool tasks receive no extra optimisation section. This is advice for later execution, not a new runtime, app connection or guarantee of token savings. See [tool execution guidance](references/tool-execution.md) for platform limits and measurement caveats.
 
 At the first response scoring at least 80%, the adviser checks open-source prompt directories without being asked, offers a specific “Act as” role or **No role** where useful, and considers optional Jev for repeated structured decisions. Suggestions fit inside the normal three questions when another round is due. A live source lookup uses generic task terms, not the user's private draft. If browsing is unavailable, the adviser labels its curated offline check. Completeness measures coverage, not prompt quality.
+
+The current release also checks inherited prompting habits against the actual model, favours one agent unless delegation adds value, and plans resumable progress for long work. Document analysis can identify supporting passages before conclusions; multiapp tasks discover relevant dependencies before narrowing retrieval. Creative briefs gain specific visual direction, and file requests specify the usable deliverable and destination. These refinements apply only where useful and do not add scores or questions. They do not install a runtime, memory or extra tools.
 
 ## Install
 
@@ -31,3 +33,5 @@ Jev is an optional hosted service for structured decisions, such as routing, sco
 Edit `src/SKILL.template.md` for shared behaviour and a platform file for platform-specific guidance. Run `python3 scripts/build.py` and `python3 scripts/check.py`. All three skills and ZIPs are generated in `dist/`.
 
 See [test cases](tests.md), [validation record](VALIDATION.md), [source and licence notes](THIRD_PARTY.md), [contribution guide](CONTRIBUTING.md) and [changelog](CHANGELOG.md). Contributions are welcome through Issues and pull requests; no prompts or usage data are sent automatically.
+
+The [fictional comparison set](evaluation/README.md) makes task-output checks repeatable across research, image prompts, video prompts, coding and computer-use plans. Its curated prompt pairs are separate from full adviser-conversation tests and do not establish general quality, token, speed or cost improvements.
