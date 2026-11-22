@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.7.2 — 2026-11-22
+
+- Adds the version and release date directly below the title and in YAML metadata in every installed skill.
+- Introduces a shared release manifest so Codex, Claude and Antigravity packages carry the same release identity.
+- Checks manifest, README, changelog, generated metadata and ZIP contents for agreement. Prompt-review behaviour is unchanged from 0.7.1.
+
 ## 0.7.1 — 2026-11-22
 
 - Makes the same numbered question layout explicit across Codex, Claude and Antigravity, with one main decision or missing fact per question.

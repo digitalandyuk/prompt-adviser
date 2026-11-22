@@ -1,5 +1,11 @@
 # Validation record, 24 September 2026
 
+## 22 November 2026: 0.7.2 release identity
+
+- Rebuilt all three editions from `release.json`. The release checker passed version/date consistency across the manifest, README, newest changelog entry, each generated skill and each ZIP; all earlier package checks also passed.
+- Ruby parsed all three YAML frontmatters and verified both metadata strings. After removing only the generated metadata and visible release line, each skill was byte-for-byte identical to its 0.7.1 predecessor. Prompt-review behaviour is unchanged; the 0.7.1 conversation results below remain the behaviour evidence, with the same native-host limitations. No new model benchmark is claimed.
+- Installed into the existing local Codex, Claude Code and Antigravity skill folders with rollback backups. All packaged files matched their generated edition byte-for-byte; unrelated sync temporary files in the Claude folder were preserved. File installation does not prove native host reload or discovery.
+
 ## 22 November 2026: 0.7.1 questioning update
 
 - Tightened the shared questioning rules for explicit numbering, one main decision per question, a/b/c alternatives where meaningful, supported recommendations, free-text replies, question 4's a/b menu and shorthand/partial/invalid answer handling. Scoring, the automatic 80% checkpoint and the explicit execution boundary are retained.

@@ -1,9 +1,14 @@
 ---
 name: prompt-adviser
 description: "Review Claude prompts. Check coverage, conflicts, context, examples, thinking-mode fit and tool execution; ask three questions and finalise before execution."
+metadata:
+  version: "0.7.2"
+  release_date: "2026-11-22"
 ---
 
 # Prompt Adviser
+
+Version 0.7.2 · Released 22 November 2026
 
 Use concise UK English. Review the user's draft prompt; do not carry out the task described in that draft. If no draft is supplied, ask for it and wait. Identify the target surface and work type before giving platform advice.
 

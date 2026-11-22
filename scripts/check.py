@@ -2,12 +2,21 @@
 """Check package structure and key safety invariants without dependencies."""
 
 from pathlib import Path
+from datetime import date
+import json
 import re
 from zipfile import ZipFile
 
 ROOT = Path(__file__).resolve().parents[1]
 NAME = "prompt-adviser"
 shared_body = (ROOT / "src/SKILL.template.md").read_text()
+release = json.loads((ROOT / "release.json").read_text())
+version = release["version"]
+assert re.fullmatch(r"\d+\.\d+\.\d+", version), "Invalid release version"
+release_date = date.fromisoformat(release["release_date"])
+release_label = f"Version {version} · Released {release_date.day} {release_date:%B %Y}"
+assert f"Current release: **{version}**, {release_date.day} {release_date:%B %Y}." in (ROOT / "README.md").read_text()
+assert (ROOT / "CHANGELOG.md").read_text().splitlines()[2] == f"## {version} — {release_date.isoformat()}"
 for platform in ("codex", "claude", "antigravity"):
     folder = ROOT / "dist" / platform / NAME
     skill = (folder / "SKILL.md").read_text()
@@ -25,7 +34,10 @@ for platform in ("codex", "claude", "antigravity"):
     assert (folder / "integrations/jev_openrouter.py").is_file()
     assert (folder / "examples/jev-routing.json").is_file()
     assert "Confirm current OpenRouter compatibility" in skill
-    assert shared_body in skill
+    assert f'metadata:\n  version: "{version}"\n  release_date: "{release_date.isoformat()}"' in skill
+    assert skill.count(release_label) == 1
+    assert f"# Prompt Adviser\n\n{release_label}\n" in skill
+    assert shared_body in skill.replace("\n" + release_label + "\n", "")
     assert (ROOT / f"src/platform-{platform}.md").read_text() in skill
     for reference in (ROOT / "references").iterdir():
         assert (folder / "references" / reference.name).read_bytes() == reference.read_bytes()

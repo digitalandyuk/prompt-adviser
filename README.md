@@ -1,6 +1,8 @@
 # Prompt Adviser
 
-Current release: **0.7.1**, 22 November 2026. See the [changelog](CHANGELOG.md) and [validation record](VALIDATION.md).
+Current release: **0.7.2**, 22 November 2026. See the [changelog](CHANGELOG.md) and [validation record](VALIDATION.md).
+
+Each installed `SKILL.md` shows its version and release date directly below the title and in YAML metadata. Compare those details with the [latest release on the website](https://promptadviserskill.com/#download) to check whether your installation is current. Installing a newer ZIP replaces the local skill; existing installations do not update automatically.
 
 An open-source skill that helps turn a draft request into a useful, executable prompt. It scores completeness, asks three focused questions per round, recommends an available model and ends with a copyable prompt. Questions are numbered, meaningful choices use a/b/c options with a supported recommendation, and you can always give your own answer. Reply in prose or shorthand such as `1b, 2a, 3c, 4a` when those options are displayed. Question 4 offers `a) Ask three more questions` or `b) Finalise the prompt`. The reviewed task starts only when the user explicitly says **Run this prompt**.
 
@@ -31,6 +33,8 @@ Jev is an optional hosted service for structured decisions, such as routing, sco
 ## Develop
 
 Edit `src/SKILL.template.md` for shared behaviour and a platform file for platform-specific guidance. Run `python3 scripts/build.py` and `python3 scripts/check.py`. All three skills and ZIPs are generated in `dist/`.
+
+Set the version and ISO release date in `release.json` before building a release, then update this release line and the changelog. The builder injects that identity into every edition; the release checker rejects mismatched metadata or archives. The website release entry must use the same version and date.
 
 See [test cases](tests.md), [validation record](VALIDATION.md), [source and licence notes](THIRD_PARTY.md), [contribution guide](CONTRIBUTING.md) and [changelog](CHANGELOG.md). Contributions are welcome through Issues and pull requests; no prompts or usage data are sent automatically.
 
