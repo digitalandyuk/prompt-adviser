@@ -1,5 +1,13 @@
 # Validation record, 24 September 2026
 
+## 22 November 2026: 0.7.1 questioning update
+
+- Tightened the shared questioning rules for explicit numbering, one main decision per question, a/b/c alternatives where meaningful, supported recommendations, free-text replies, question 4's a/b menu and shorthand/partial/invalid answer handling. Scoring, the automatic 80% checkpoint and the explicit execution boundary are retained.
+- Rebuilt all three editions and ZIPs. The dependency-free release checker passed archive consistency, references, shared-source inclusion and public-text checks. Ruby parsed each edition's YAML frontmatter. The bundled quick validator still cannot start because this Python environment lacks PyYAML; no pass is claimed for it.
+- Ran 18 actual, isolated Codex CLI calls using fictional drafts and the generated edition text. All 36 automated format/state observations passed. Manual inspection checked question focus, recommendation reasons, correct shorthand selection mapping, preservation of answers, missing question 4, invalid letters, free-text audience, No role, final prompt placement and the unexecuted task boundary. Exact model outputs and the method are in [the questioning report](evaluation/questioning-2026-11-22/REPORT.md).
+- Claude and Antigravity edition results are Codex-hosted instruction checks. Claude Code 2.1.328 reported signed out; no native Claude conversation was run. No Antigravity app or CLI was available. These tests do not prove native platform behaviour or installed-skill discovery. The harness deliberately disables browsing, so it verifies the honest offline 80% checkpoint, not a fresh live directory search.
+- Installed the generated Codex edition into its existing local skill folder, retaining a rollback backup, and installed the Claude and Antigravity editions into their personal skill folders. Every installed file matched its generated edition byte-for-byte. The Antigravity global skill path was checked against Google's current codelab. This is file-installation evidence, not proof of host reload/discovery or native Claude/Antigravity behaviour. GitHub publication and website delivery are checked separately. No general quality, speed, token or cost improvement is claimed.
+
 - Both installable skills and ZIPs were generated from the shared source.
 - `scripts/check.py` passed package structure, reference, execution-boundary, question-count and public-text checks.
 - Ruby's YAML parser accepted both skill frontmatters, all three Issue forms and the GitHub Actions file.

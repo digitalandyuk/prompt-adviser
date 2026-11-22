@@ -1,0 +1,125 @@
+{
+  "platform_edition": "claude",
+  "host": "Codex CLI",
+  "native_platform_test": false,
+  "history_mode": "Actual prior model replies replayed for the next turn; partial/invalid/free-text cases use an explicit seeded prior menu.",
+  "automated_observations": {
+    "first_round_numbered": true,
+    "first_round_lettered": true,
+    "second_round_numbered": true,
+    "fourth_has_a_b": true,
+    "first_round_no_finished_prompt": true,
+    "second_round_no_finished_prompt": true,
+    "final_contains_prompt": true,
+    "partial_asks_only_fourth": true,
+    "partial_no_finished_prompt": true,
+    "invalid_choice_flagged": true,
+    "free_text_preserved": true,
+    "free_text_no_role_inserted": true
+  },
+  "runs": [
+    {
+      "platform_edition": "claude",
+      "host": "Codex CLI",
+      "case": "01-first-round",
+      "exit_code": 0,
+      "tool_items": [],
+      "output_present": true,
+      "usage": [
+        {
+          "input_tokens": 20242,
+          "cached_input_tokens": 13952,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 603,
+          "reasoning_output_tokens": 165
+        }
+      ]
+    },
+    {
+      "platform_edition": "claude",
+      "host": "Codex CLI",
+      "case": "02-more-shorthand",
+      "exit_code": 0,
+      "tool_items": [],
+      "output_present": true,
+      "usage": [
+        {
+          "input_tokens": 20696,
+          "cached_input_tokens": 13952,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 507,
+          "reasoning_output_tokens": 49
+        }
+      ]
+    },
+    {
+      "platform_edition": "claude",
+      "host": "Codex CLI",
+      "case": "03-finalise-shorthand",
+      "exit_code": 0,
+      "tool_items": [],
+      "output_present": true,
+      "usage": [
+        {
+          "input_tokens": 21204,
+          "cached_input_tokens": 7296,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 461,
+          "reasoning_output_tokens": 0
+        }
+      ]
+    },
+    {
+      "platform_edition": "claude",
+      "host": "Codex CLI",
+      "case": "04-missing-fourth",
+      "exit_code": 0,
+      "tool_items": [],
+      "output_present": true,
+      "usage": [
+        {
+          "input_tokens": 20511,
+          "cached_input_tokens": 13952,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 289,
+          "reasoning_output_tokens": 99
+        }
+      ]
+    },
+    {
+      "platform_edition": "claude",
+      "host": "Codex CLI",
+      "case": "05-invalid-choice",
+      "exit_code": 0,
+      "tool_items": [],
+      "output_present": true,
+      "usage": [
+        {
+          "input_tokens": 30287,
+          "cached_input_tokens": 7296,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 447,
+          "reasoning_output_tokens": 94
+        }
+      ]
+    },
+    {
+      "platform_edition": "claude",
+      "host": "Codex CLI",
+      "case": "06-free-text-finalise",
+      "exit_code": 0,
+      "tool_items": [],
+      "output_present": true,
+      "usage": [
+        {
+          "input_tokens": 20526,
+          "cached_input_tokens": 16000,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 563,
+          "reasoning_output_tokens": 37
+        }
+      ]
+    }
+  ],
+  "manual_review_required": "Review focus, correct option mapping, recommendations, no repeated resolved decisions, checkpoint, final prompt and execution boundary."
+}

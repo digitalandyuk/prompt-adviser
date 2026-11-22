@@ -1,8 +1,8 @@
 # Prompt Adviser
 
-Current release: **0.7.0**, 3 November 2026. See the [changelog](CHANGELOG.md) and [validation record](VALIDATION.md).
+Current release: **0.7.1**, 22 November 2026. See the [changelog](CHANGELOG.md) and [validation record](VALIDATION.md).
 
-An open-source skill that helps turn a draft request into a useful, executable prompt. It scores completeness, asks three focused questions per round, recommends an available model and ends with a copyable prompt. The reviewed task starts only when the user explicitly says **Run this prompt**.
+An open-source skill that helps turn a draft request into a useful, executable prompt. It scores completeness, asks three focused questions per round, recommends an available model and ends with a copyable prompt. Questions are numbered, meaningful choices use a/b/c options with a supported recommendation, and you can always give your own answer. Reply in prose or shorthand such as `1b, 2a, 3c, 4a` when those options are displayed. Question 4 offers `a) Ask three more questions` or `b) Finalise the prompt`. The reviewed task starts only when the user explicitly says **Run this prompt**.
 
 It also checks contradictory instructions, missing or excessive context, example quality and model/thinking-mode fit. Finished prompts use applicable labelled sections, evidence and uncertainty rules, and proportionate agent boundaries. Consistency is scored out of 2 (higher is clearer); missing and excess context each use 0–2 (lower is better). These are editorial diagnostics, not measured performance predictions, and are not averaged into completeness.
 

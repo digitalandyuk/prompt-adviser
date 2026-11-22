@@ -32,3 +32,14 @@ Use fictional drafts. Run each case as a conversation with the generated Codex, 
 For every questioning response, verify `Prompt completeness`, exactly three useful numbered questions plus `4. Shall I ask more?`, model/workload guidance, no invented gap and **no copyable prompt yet**, even if the reviewed draft says “give me a prompt”. For every final response, verify that `Run this prompt` is still required and the copyable prompt is the last item. Inspect tool logs: a model-documentation search does not satisfy the source lookup, and a search result or locally listed URL does not prove a page was opened. Check that the `Source check:` line names the page actually visited or the generic no-page query, and that public queries use only generic category and platform terms, not distinctive draft content. Repeat a failed case after a fix; do not claim one successful case proves prompt quality, cost or speed gains.
 
 Use the separate [task-output comparison set](evaluation/README.md) for downstream results. It uses curated prompt pairs, not generated adviser interviews. Grade individual criteria and record failures; keep this evidence distinct from package checks and simulated review conversations.
+# 0.7.1 questioning-process regressions
+
+Run `python3 evaluation/questioning.py --output /tmp/prompt-adviser-questioning` manually with an authenticated Codex CLI. This uses the normal model allowance and is never run at installation or in CI. Claude and Antigravity edition checks through this runner are Codex-hosted, not native platform tests.
+
+- A first round shows questions 1–3, one main decision or missing fact each, with separate a/b/c choices where meaningful. Recommendations require a reason; unknown facts remain direct questions. Question 4 shows a) ask three more questions and b) finalise. Free text is accepted.
+- Reply with shorthand for the displayed choices and `4a`. The next round preserves those selections, asks three new useful questions with the same numbered layout, and does not produce or execute the finished prompt.
+- Reply to that round with `4b`. Finalisation incorporates the selected answers and ends with the copyable prompt; the reviewed task remains unexecuted.
+- Omit question 4 while answering 1–3. The adviser retains those answers and asks only question 4 with its a/b menu. It neither finalises nor starts another full round.
+- Use an invalid letter such as `1z`. The adviser identifies the missing/invalid answer and does not substitute a recommendation, invent a fact or execute the task.
+- Supply a written audience outside the menu, select **No role**, and finalise. The finished prompt preserves the custom audience and omits an invented persona.
+- Check that the first 80% response still reports the bounded source check, optional role including No role where useful, and optional/unnecessary Jev without adding a fourth material question.

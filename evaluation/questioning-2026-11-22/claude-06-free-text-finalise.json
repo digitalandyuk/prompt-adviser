@@ -1,0 +1,17 @@
+{
+  "platform_edition": "claude",
+  "host": "Codex CLI",
+  "case": "06-free-text-finalise",
+  "exit_code": 0,
+  "tool_items": [],
+  "output_present": true,
+  "usage": [
+    {
+      "input_tokens": 20526,
+      "cached_input_tokens": 16000,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 563,
+      "reasoning_output_tokens": 37
+    }
+  ]
+}

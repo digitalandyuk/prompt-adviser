@@ -1,0 +1,17 @@
+{
+  "platform_edition": "antigravity",
+  "host": "Codex CLI",
+  "case": "01-first-round",
+  "exit_code": 0,
+  "tool_items": [],
+  "output_present": true,
+  "usage": [
+    {
+      "input_tokens": 20280,
+      "cached_input_tokens": 16000,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 581,
+      "reasoning_output_tokens": 74
+    }
+  ]
+}

@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.7.1 — 2026-11-22
+
+- Makes the same numbered question layout explicit across Codex, Claude and Antigravity, with one main decision or missing fact per question.
+- Adds a/b/c choices for meaningful alternatives, supported recommendations and a free-text alternative without inventing options for unknown facts.
+- Gives question 4 explicit choices to ask three more questions or finalise; supports shorthand against the latest displayed menu and clarifies partial or invalid replies.
+- Preserves scoring, the automatic 80% source/role/Jev checkpoint and the separate Run this prompt boundary. Adds questioning-process checks with platform-testing limits recorded in VALIDATION.md.
+
 ## 0.7.0 — 2026-11-03
 
 - Adds a model-specific audit of inherited thinking, blanket tool-use and repeated self-check instructions while preserving acceptance evidence and approval gates.

@@ -1,0 +1,17 @@
+{
+  "platform_edition": "codex",
+  "host": "Codex CLI",
+  "case": "05-invalid-choice",
+  "exit_code": 0,
+  "tool_items": [],
+  "output_present": true,
+  "usage": [
+    {
+      "input_tokens": 20542,
+      "cached_input_tokens": 20096,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 497,
+      "reasoning_output_tokens": 108
+    }
+  ]
+}

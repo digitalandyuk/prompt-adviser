@@ -1,3 +1,5 @@
 __pycache__/
 *.pyc
 .DS_Store
+# Full replay inputs duplicate the packaged skill and prior public replies.
+evaluation/questioning-*/*.input.txt
