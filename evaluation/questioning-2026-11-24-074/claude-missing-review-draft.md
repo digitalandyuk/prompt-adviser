@@ -1,0 +1,1 @@
+Please paste or attach the draft prompt. If you know where you’ll use it, include the Claude surface, such as Claude.ai, Claude Code or the Anthropic API.

@@ -1,4 +1,12 @@
-# Validation record, 24 September 2026
+# Validation record
+
+## 24 November 2026: 0.7.4 creation and finalisation update
+
+- Added explicit review/create/finalise routing, labelled placeholders versus genuinely blocking unknowns, concise immediate finalisation, strict-output handling and the preserved first-80% Source/Role/Jev checkpoint. Added conditional workflow guidance and edition/checksum release identity without removing the interactive question process or execution boundary.
+- Rebuilt all three editions and deterministic archives. The release checker and Ruby YAML parsing passed. The bundled quick validator remains unavailable because PyYAML is absent.
+- Ran 24 final actual model calls through Codex CLI, eight cases per edition; all 99 automated observations passed. A separate live Codex-edition test searched prompt directories with generic terms, inspected public source content and reported the first-80% checkpoint. [Actual replies, method and limitations](evaluation/questioning-2026-11-24-074/REPORT.md).
+- Verified all managed local installation files against the frozen final packages, retaining backups. Claude/Antigravity edition behaviour tests were Codex-hosted; the Claude Code native attempt stopped at authentication without a model call, and no native Antigravity host was available. A separately managed ChatGPT account copy is not automatically updated by these local installs. No native-host discovery or performance claim is made.
+
 
 ## 22 November 2026: 0.7.2 release identity
 

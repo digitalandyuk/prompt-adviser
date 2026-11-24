@@ -1,0 +1,324 @@
+{
+  "host": "Codex CLI with live web search",
+  "edition": "codex",
+  "exit_code": 0,
+  "skill_sha256": "79fa7583d74c453a02ebb178c5ae505e9b533af876c315b12a21d743c0b9c5e4",
+  "tool_items": [
+    {
+      "id": "exec-aa019b61-7964-4f8d-868d-bdd198ffaf5f",
+      "type": "web_search",
+      "query": "site:github.com/openai/openai-cookbook design layout visual document prompt Codex ...",
+      "action": {
+        "type": "search",
+        "queries": [
+          "site:github.com/openai/openai-cookbook design layout visual document prompt Codex",
+          "site:developers.openai.com codex models recommended GPT reasoning effort Codex"
+        ]
+      },
+      "results": [
+        {
+          "type": "text_result",
+          "domain": "developers.openai.com",
+          "ref_id": "turn0search0",
+          "snippet": "Codex models advance the frontier of intelligence and efficiency and our recommended agentic coding model. ... We recommend \u201cmedium\u201d reasoning effort as a good all-around",
+          "title": "Codex Prompting Guide",
+          "url": "https://developers.openai.com/cookbook/examples/gpt-5/codex_prompting_guide?translationFallback=de-DE"
+        },
+        {
+          "type": "text_result",
+          "domain": "developers.openai.com",
+          "ref_id": "turn0search1",
+          "snippet": "They\u2019re also the best models for Codex CLI, our lightweight coding agent. ... Defaults are also model-dependent rather than universal. `gpt-5.5` defaults to `medium` reasoning",
+          "title": "Reasoning models | OpenAI API",
+          "url": "https://developers.openai.com/api/docs/guides/reasoning"
+        },
+        {
+          "type": "text_result",
+          "domain": "developers.openai.com",
+          "ref_id": "turn0search2",
+          "snippet": "If you omit `reasoning.effort`, GPT-5.6 defaults to `medium` in both modes. ... Our reasoning models like `gpt-5.5` and `gpt-5.4` support interleaved thinking, where the model",
+          "title": "Reasoning models | OpenAI API",
+          "url": "https://developers.openai.com/api/docs/guides/reasoning?api-mode=chat"
+        },
+        {
+          "type": "text_result",
+          "domain": "developers.openai.com",
+          "ref_id": "turn0search3",
+          "snippet": "* `reasoning.effort` supports `low`, `medium`, `high`, and `xhigh`. ... ### Recommended Starter Prompt ... For gpt-5.3-codex and after, these updates are more communicative and provide",
+          "title": "Using GPT-5.3-Codex | OpenAI API",
+          "url": "https://developers.openai.com/api/docs/guides/latest-model?model=gpt-5.3-codex"
+        },
+        {
+          "type": "text_result",
+          "domain": "developers.openai.com",
+          "ref_id": "turn0search4",
+          "snippet": "* For most tasks in ChatGPT Work or Codex, start with GPT-6.2 Sol. ... You can find more details on recommended tasks per model and",
+          "title": "Model selection | OpenAI API",
+          "url": "https://developers.openai.com/api/docs/guides/model-selection?trk=article-ssr-frontend-pulse_x-social-details_comments-action_comment-text"
+        },
+        {
+          "type": "text_result",
+          "domain": "developers.openai.com",
+          "ref_id": "turn0search5",
+          "snippet": "Our most intelligent coding model optimized for long-horizon, agentic coding tasks. ... GPT-5.2-Codex supports `low`, `medium`, `high`, and `xhigh` reasoning effort settings. If you want",
+          "title": "GPT-5.2-Codex Model | OpenAI API",
+          "url": "https://developers.openai.com/api/docs/models/gpt-5.2-codex"
+        },
+        {
+          "type": "text_result",
+          "domain": "github.com",
+          "ref_id": "turn0search6",
+          "snippet": "This cookbook shows how to use OpenAI's Codex CLI to modernize a legacy repository in a way that is: ... We\u2019ve broken it down into",
+          "title": "openai-cookbook/examples/codex/code_modernization.md at main \u00b7 openai/openai-cookbook \u00b7 GitHub",
+          "url": "https://github.com/openai/openai-cookbook/blob/main/examples/codex/code_modernization.md"
+        },
+        {
+          "type": "text_result",
+          "domain": "github.com",
+          "ref_id": "turn0search7",
+          "snippet": "Codex and the `gpt-5.2-codex` model (recommended) can be used to implement complex tasks that take significant time to research, design, and implement. ... The particular",
+          "title": "openai-cookbook/articles/codex_exec_plans.md at main \u00b7 openai/openai-cookbook \u00b7 GitHub",
+          "url": "https://github.com/openai/openai-cookbook/blob/main/articles/codex_exec_plans.md"
+        },
+        {
+          "type": "text_result",
+          "domain": "developers.openai.com",
+          "ref_id": "turn0search8",
+          "snippet": "When migrating to GPT-6, preserve your current model\u2019s workload role and effective reasoning effort where supported. ... When reasoning effort is not `none`, remove `temperature`,",
+          "title": "API deployment checklist | OpenAI API",
+          "url": "https://developers.openai.com/api/docs/guides/deployment-checklist?trk=public_post_comment-text"
+        },
+        {
+          "type": "text_result",
+          "domain": "developers.openai.com",
+          "ref_id": "turn0search9",
+          "snippet": "OpenAI offers two types of models: reasoning models (o3 and o4-mini, for example) and GPT models (like GPT-4.1). ... Most AI workflows will use a",
+          "title": "Reasoning best practices | OpenAI API",
+          "url": "https://developers.openai.com/api/docs/guides/reasoning-best-practices?site_locale=en"
+        },
+        {
+          "type": "text_result",
+          "domain": "developers.openai.com",
+          "ref_id": "turn0search10",
+          "snippet": "Within the GPT-5.4 generation, `gpt-5.4` is the general-purpose model for workflows that move between software engineering, reasoning, writing, and tool use. ... Recommended defaults: ...",
+          "title": "Using GPT-5.4 | OpenAI API",
+          "url": "https://developers.openai.com/api/docs/guides/latest-model?model=gpt-5.4"
+        },
+        {
+          "type": "text_result",
+          "domain": "developers.openai.com",
+          "ref_id": "turn0search11",
+          "snippet": "Codex can apply the recommended changes in this guide with the OpenAI Docs skill. ... * If you are migrating from GPT-5.5 or GPT-5.4, preserve",
+          "title": "Using GPT-5.6 | OpenAI API",
+          "url": "https://developers.openai.com/api/docs/guides/latest-model?model=gpt-5.6"
+        },
+        {
+          "type": "text_result",
+          "domain": "brand.github.com",
+          "ref_id": "turn0search12",
+          "snippet": "Diagram of a layout grid example with a small GitHub/Copilot product mockup inside a tall white rectangle. ... In this example the margin is consistent",
+          "title": "2026 BRAND GUIDELINES \u2014 LAYOUT",
+          "url": "https://brand.github.com/GitHub-BrandGuidelines-2026.pdf"
+        },
+        {
+          "type": "text_result",
+          "domain": "github.com",
+          "ref_id": "turn0search13",
+          "snippet": "SynergyOS Design Guide ... If people cannot connect their OpenAI (LLM) API Key succesfully, they currently don't get any",
+          "title": "SynergyOS Design Guide",
+          "url": "https://github.com/user-attachments/files/15594646/SynergyOS.Design.Guide.pdf"
+        }
+      ]
+    },
+    {
+      "id": "exec-ee2738a3-6715-4791-9076-3f818300c80a",
+      "type": "web_search",
+      "query": "'GPT-6.2 Sol'",
+      "action": {
+        "type": "find_in_page",
+        "pattern": "GPT-6.2 Sol"
+      },
+      "results": [
+        {
+          "type": "text_result",
+          "domain": "developers.openai.com",
+          "ref_id": "turn1view0",
+          "snippet": "Total lines: 1122",
+          "thumbnail_url": "https://images.openai.com/static-rsc-1/mTeM6xPgD093PUgSPxP2CrVZ0WAjK_J9jBQlkbUqzLaS1k72XtVCd7enivOzIt4QyZ2bp9JwYT_nb__Rys9Am6jjpCn3be3oTnQSLsf2NGG55cafm8uIaKXt1e-cLg7j",
+          "title": "Model selection | OpenAI API",
+          "url": "https://developers.openai.com/api/docs/guides/model-selection?trk=article-ssr-frontend-pulse_x-social-details_comments-action_comment-text"
+        },
+        {
+          "type": "text_result",
+          "domain": "developers.openai.com",
+          "ref_id": "turn1view1",
+          "snippet": "Total lines: 1122",
+          "thumbnail_url": "https://images.openai.com/static-rsc-1/Od1ZKNHBedBCsOQgab498UJmx49JCGVrbcrZIM1h4SHQFyLw8vtRk3PM0DiLZfoIIcyOV15pxpfF_wrYSvNt-V_mjHVr-3ua6ns79BCk8qzBCT3y_E51VolVf7Di8vMn",
+          "title": "Model selection | OpenAI API",
+          "url": "https://developers.openai.com/api/docs/guides/model-selection?trk=article-ssr-frontend-pulse_x-social-details_comments-action_comment-text"
+        }
+      ]
+    },
+    {
+      "id": "exec-565f3706-35b0-44f5-b53b-b3648cf37a36",
+      "type": "web_search",
+      "query": "site:github.com/openai/openai-cookbook slide design presentation image prompting guide",
+      "action": {
+        "type": "search",
+        "query": "site:github.com/openai/openai-cookbook slide design presentation image prompting guide"
+      },
+      "results": [
+        {
+          "type": "text_result",
+          "domain": "github.com",
+          "ref_id": "turn2search0",
+          "snippet": "The moment you're fitting \"everything important\" onto one slide, you've switched from designing a presentation to writing a report. ... Each slide should feel like",
+          "title": "plugins/plugins/figma/skills/figma-use-slides/references/slide-design.md at main \u00b7 openai/plugins \u00b7 GitHub",
+          "url": "https://github.com/openai/plugins/blob/main/plugins/figma/skills/figma-use-slides/references/slide-design.md"
+        },
+        {
+          "type": "text_result",
+          "domain": "github.com",
+          "ref_id": "turn2search1",
+          "snippet": "They cover product and user context, design-system alignment, first-screen usability, familiar controls, expected states, responsive behavior, and common generated-UI defaults to avoid, such as generi",
+          "title": "skills/skills/.curated/openai-docs/references/prompting-guide.md at main \u00b7 openai/skills \u00b7 GitHub",
+          "url": "https://github.com/openai/skills/blob/main/skills/.curated/openai-docs/references/prompting-guide.md"
+        },
+        {
+          "type": "text_result",
+          "domain": "github.com",
+          "ref_id": "turn2search2",
+          "snippet": "# Prompting best practices ... * For compositing, describe how the images interact (`place the subject from Image 2 into Image 1`). ... * product-mockup:",
+          "title": "codex/codex-rs/skills/src/assets/samples/imagegen/references/prompting.md at main \u00b7 openai/codex \u00b7 GitHub",
+          "url": "https://github.com/openai/codex/blob/main/codex-rs/skills/src/assets/samples/imagegen/references/prompting.md"
+        },
+        {
+          "type": "text_result",
+          "domain": "github.com",
+          "ref_id": "turn2search3",
+          "snippet": "# Prompting best practices ... This file is about prompt structure, specificity, and iteration. ... * Label each image by index and role (`Image 1:",
+          "title": "skills/skills/.system/imagegen/references/prompting.md at main \u00b7 openai/skills \u00b7 GitHub",
+          "url": "https://github.com/openai/skills/blob/main/skills/.system/imagegen/references/prompting.md"
+        },
+        {
+          "type": "text_result",
+          "domain": "github.com",
+          "ref_id": "turn2search4",
+          "snippet": "* Inspect prompt, conversation history, existing file and relevant references to figure out what questions to ask. ... * Use `[@presentations](plugin://presentations@openai-primary-runtime)` to create",
+          "title": "plugins/plugins/google-drive/skills/google-slides/SKILL.md at main \u00b7 openai/plugins \u00b7 GitHub",
+          "url": "https://github.com/openai/plugins/blob/main/plugins/google-drive/skills/google-slides/SKILL.md"
+        },
+        {
+          "type": "text_result",
+          "domain": "github.com",
+          "ref_id": "turn2search5",
+          "snippet": "This guide shares strategies and tactics for getting better results from large language models (sometimes referred to as GPT models) like GPT-4o. ... - [Instruct",
+          "title": "openai-cookbook/examples/data/oai_docs/prompt-engineering.txt at main \u00b7 openai/openai-cookbook \u00b7 GitHub",
+          "url": "https://github.com/openai/openai-cookbook/blob/main/examples/data/oai_docs/prompt-engineering.txt"
+        },
+        {
+          "type": "text_result",
+          "domain": "github.com",
+          "ref_id": "turn2search6",
+          "snippet": "Of all the inputs to a large language model, by far the most influential is the text prompt. ... For more prompt examples, visit OpenAI",
+          "title": "openai-cookbook/articles/how_to_work_with_large_language_models.md at main \u00b7 openai/openai-cookbook \u00b7 GitHub",
+          "url": "https://github.com/openai/openai-cookbook/blob/main/articles/how_to_work_with_large_language_models.md"
+        },
+        {
+          "type": "text_result",
+          "domain": "github.com",
+          "ref_id": "turn2search7",
+          "snippet": "Image: openai ... cookbook.openai.com ... .github | .github | |",
+          "title": "GitHub - openai/openai-cookbook: Examples and guides for using the OpenAI API \u00b7 GitHub",
+          "url": "https://github.com/openai/openai-cookbook"
+        },
+        {
+          "type": "text_result",
+          "domain": "github.com",
+          "ref_id": "turn2search8",
+          "snippet": "Image placeholders can be prompt-only. `add_image` accepts `prompt` without `path`/`data_url`, and unresolved placeholders export as a visible placeholder box instead of failing. Layout placeholders w",
+          "title": "codex-OpenAI/codex-rs/core/templates/tools/presentation_artifact.md at main \u00b7 bit-cook/codex-OpenAI \u00b7 GitHub",
+          "url": "https://github.com/bit-cook/codex-OpenAI/blob/main/codex-rs/core/templates/tools/presentation_artifact.md"
+        },
+        {
+          "type": "text_result",
+          "domain": "github.com",
+          "ref_id": "turn2search9",
+          "snippet": "* Generate a new image (concept art, product shot, cover, website hero) ... * text-localization \u2014 translate/replace in-image text, preserve layout. ... * `Asset type`",
+          "title": "skills/skills/.system/imagegen/SKILL.md at main \u00b7 openai/skills \u00b7 GitHub",
+          "url": "https://github.com/openai/skills/blob/main/skills/.system/imagegen/SKILL.md"
+        },
+        {
+          "type": "text_result",
+          "domain": "github.com",
+          "ref_id": "turn2search10",
+          "snippet": "* productivity-visual \u2014 slide, chart, workflow, and data-heavy business visuals. ... * text-localization \u2014 translate/replace in-image text, preserve layout. ... * `Asset type` and `Input",
+          "title": "codex/codex-rs/skills/src/assets/samples/imagegen/SKILL.md at main \u00b7 openai/codex \u00b7 GitHub",
+          "url": "https://github.com/openai/codex/blob/main/codex-rs/skills/src/assets/samples/imagegen/SKILL.md"
+        },
+        {
+          "type": "text_result",
+          "domain": "github.com",
+          "ref_id": "turn2search11",
+          "snippet": "Recreate one slide image, screenshot, or AI-rendered page as one editable PowerPoint slide. ... LING_MODEL=inclusionai/ming-image-0.1-design-layer ... LING_BASE_URL=https://api.novita.ai/openai/v1 ...",
+          "title": "ling-cookbook/resources/recommended-skills/image-to-editable-ppt/README.md at main \u00b7 inclusionAI/ling-cookbook \u00b7 GitHub",
+          "url": "https://github.com/inclusionAI/ling-cookbook/blob/main/resources/recommended-skills/image-to-editable-ppt/README.md"
+        },
+        {
+          "type": "text_result",
+          "domain": "brand.github.com",
+          "ref_id": "turn2search12",
+          "snippet": "GitHub presentation template preview with dark navy slide, GitHub logo, large placeholder text \u201cClick to add title,\u201d four small content blocks with image icons and",
+          "title": "2025 BRAND GUIDELINES",
+          "url": "https://brand.github.com/GitHub-BrandGuidelines-2025.pdf"
+        },
+        {
+          "type": "text_result",
+          "domain": "brand.github.com",
+          "ref_id": "turn2search13",
+          "snippet": "Yes, if approved, you may use the GitHub logo in a static graphic or post to announce your sponsorship or session participation. ... Can I",
+          "title": "2026 BRAND GUIDELINES \u2014 CO-BRANDING",
+          "url": "https://brand.github.com/GitHub-BrandGuidelines-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "exec-a2a85aba-909f-441b-ba9f-4f528b4d2397",
+      "type": "web_search",
+      "query": "'Creative drafting guardrails'",
+      "action": {
+        "type": "find_in_page",
+        "pattern": "Creative drafting guardrails"
+      },
+      "results": [
+        {
+          "type": "text_result",
+          "domain": "github.com",
+          "ref_id": "turn3view0",
+          "snippet": "Total lines: 360",
+          "thumbnail_url": "https://images.openai.com/static-rsc-1/-RxvbQzjWypT_X6ixeZobsiIvjDubJa9XgtIy0aZpwqsYoE33LsG8hFVrPjeH2WHbtJ4vA9j1Ce_BWUp6XGwdfrI0UbaP-HWGKyMJqwXDmV_GXfbkzlbzCfHKgqayozBrbW4Gf5C0yYwtIz_84J87ensCNz0SAzcs-kRLKLLPOD043JRmjuG5DM4QP8Wxgx2",
+          "title": "skills/skills/.curated/openai-docs/references/prompting-guide.md at main \u00b7 openai/skills \u00b7 GitHub",
+          "url": "https://github.com/openai/skills/blob/main/skills/.curated/openai-docs/references/prompting-guide.md"
+        },
+        {
+          "type": "text_result",
+          "domain": "github.com",
+          "ref_id": "turn3view1",
+          "snippet": "Total lines: 360",
+          "thumbnail_url": "https://images.openai.com/static-rsc-1/52pPsqedQvHlSpqnn61CVql2pX17AQhkSWVcu-cPZMOUORW7Q4xn456H5E6taiZ1zfi7k2Bb_RTRl-kTxopImQbJ59_vV9QWko8q57mvN_nj1hkNrOQDglQ9J_9T0QBjVz3V1PNZZ1IlbQ6-glwaqa4L5QCLKHWn92dUUTa4P7utRFsVePwUeMk2i-jkfol3",
+          "title": "skills/skills/.curated/openai-docs/references/prompting-guide.md at main \u00b7 openai/skills \u00b7 GitHub",
+          "url": "https://github.com/openai/skills/blob/main/skills/.curated/openai-docs/references/prompting-guide.md"
+        }
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "input_tokens": 164725,
+      "cached_input_tokens": 141312,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1091,
+      "reasoning_output_tokens": 34
+    }
+  ]
+}

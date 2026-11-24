@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.7.4 — 2026-11-24
+
+- Consolidates the conversation-based 0.7.3 account skill into the shared Codex, Claude and Antigravity source, fixing the scoring instruction that still required a draft during creation.
+- Distinguishes draft review, creation from a brief/conversation and explicit immediate finalisation. Interactive review retains three numbered questions, useful lettered choices and the fourth-question menu.
+- Separates essential unknowns from labelled assumptions/placeholders; preserves access, permission, budget and execution boundaries.
+- Adds concise finalisation and prompt-only output without skipping internal checks or inserting unchosen options. The first 80% source/role/Jev checkpoint still applies.
+- Carries compact relevant context into reusable workflows, with prototypes, editable deliverables and observable acceptance evidence where useful.
+- Adds visible edition labels, a shared checksum manifest and a delivery checklist to distinguish public packages, local files and separately managed hosted skills.
+
+## 0.7.3 — 2026-11-24 (account-managed ChatGPT pilot)
+
+- Added prompt creation from conversation, immediate finished-prompt requests and repeatable workflow guidance in a separately installed ChatGPT account skill.
+- This was not a shared GitHub/website release for the three packaged editions. Its general changes are consolidated in 0.7.4; no retrospective native-platform test claim is made.
+
 ## 0.7.2 — 2026-11-22
 
 - Adds the version and release date directly below the title and in YAML metadata in every installed skill.

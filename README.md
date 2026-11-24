@@ -1,10 +1,12 @@
 # Prompt Adviser
 
-Current release: **0.7.2**, 22 November 2026. See the [changelog](CHANGELOG.md) and [validation record](VALIDATION.md).
+Current release: **0.7.4**, 24 November 2026. See the [changelog](CHANGELOG.md) and [validation record](VALIDATION.md).
 
-Each installed `SKILL.md` shows its version and release date directly below the title and in YAML metadata. Compare those details with the [latest release on the website](https://promptadviserskill.com/#download) to check whether your installation is current. Installing a newer ZIP replaces the local skill; existing installations do not update automatically.
+Each installed `SKILL.md` shows its version, release date and platform edition directly below the title and in YAML metadata. Compare those details with the [latest release on the website](https://promptadviserskill.com/#download) to check whether your installation is current. Installing a newer ZIP replaces the local skill; existing installations do not update automatically. Archive and entrypoint hashes are recorded in [`dist/release-manifest.json`](dist/release-manifest.json).
 
-An open-source skill that helps turn a draft request into a useful, executable prompt. It scores completeness, asks three focused questions per round, recommends an available model and ends with a copyable prompt. Questions are numbered, meaningful choices use a/b/c options with a supported recommendation, and you can always give your own answer. Reply in prose or shorthand such as `1b, 2a, 3c, 4a` when those options are displayed. Question 4 offers `a) Ask three more questions` or `b) Finalise the prompt`. The reviewed task starts only when the user explicitly says **Run this prompt**.
+An open-source skill that creates or improves prompts from a draft, brief or relevant conversation. It scores coverage, recommends a suitable model and ends with a copyable prompt. In interactive reviews it asks three focused numbered questions with useful a/b/c choices and a supported recommendation; you can always give your own answer. Reply in prose or shorthand such as `1b, 2a, 3c, 4a` when those choices were shown. Question 4 offers `a) Ask three more questions` or `b) Finalise the prompt`. An explicit request for a finished prompt skips mandatory rounds, using labelled assumptions/placeholders for non-blocking gaps. A prompt-only request returns just the prompt. The reviewed task starts only when the user explicitly says **Run this prompt**.
+
+For conversation-based workflows it preserves accepted decisions, trims unrelated context and plans representative prototypes, editable deliverables and clear acceptance checks before full production. Missing access, permissions, budgets or personal facts are never invented. Interactive questions remain available when requested. The first 80% source/role/Jev checkpoint also applies during immediate creation/finalisation; prompt-only output retains these checks internally and never inserts unchosen options.
 
 It also checks contradictory instructions, missing or excessive context, example quality and model/thinking-mode fit. Finished prompts use applicable labelled sections, evidence and uncertainty rules, and proportionate agent boundaries. Consistency is scored out of 2 (higher is clearer); missing and excess context each use 0–2 (lower is better). These are editorial diagnostics, not measured performance predictions, and are not averaged into completeness.
 
@@ -22,7 +24,7 @@ Download the appropriate archive from [`dist/`](dist/) and unzip it. The archive
 - **Claude Code:** copy that folder into `~/.claude/skills/`, then restart Claude Code. Invoke `/prompt-adviser` or name the skill in a request.
 - **Claude.ai custom skills:** where your account offers skill uploads, upload the Claude ZIP through **Customize → Skills**. Availability and labels may vary by plan and product version.
 - **Google Antigravity:** copy the Antigravity edition into `<project-root>/.agents/skills/` for one project. Antigravity's current installed customization guide also documents `~/.gemini/config/` as its global root, with skills in `skills/<name>/SKILL.md`; confirm that location for your installed version before choosing a global install. See [Google's Antigravity guide](https://codelabs.developers.google.com/getting-started-with-antigravity-skills). Native Antigravity behaviour has not yet been validated. Gemini web and AI Studio use different mechanisms.
-- **ChatGPT:** ChatGPT conversations do not install a Codex skill directly. The Codex edition can still be used in Codex desktop, or its instructions can be adapted manually to a supported ChatGPT custom-instruction or GPT workflow. No automatic ChatGPT installation is claimed.
+- **ChatGPT:** An account-managed ChatGPT skill is a separate installation from local Codex files. Where your account offers Skills controls, use its supported import/update route and verify the installed version there. Updating GitHub, this website or a local Codex folder does not update that hosted copy. An ordinary chat attachment is not proof of installation; no account-wide automatic update is claimed.
 
 Example: `Use Prompt Adviser to improve this prompt: Create a 12-second product video for a new reusable water bottle.`
 
@@ -34,7 +36,7 @@ Jev is an optional hosted service for structured decisions, such as routing, sco
 
 Edit `src/SKILL.template.md` for shared behaviour and a platform file for platform-specific guidance. Run `python3 scripts/build.py` and `python3 scripts/check.py`. All three skills and ZIPs are generated in `dist/`.
 
-Set the version and ISO release date in `release.json` before building a release, then update this release line and the changelog. The builder injects that identity into every edition; the release checker rejects mismatched metadata or archives. The website release entry must use the same version and date.
+Set the version and ISO release date in `release.json` before building a release, then update this release line and the changelog. The builder injects that identity into every edition and generates the archive checksum manifest; the release checker rejects mismatched metadata or archives. The website release entry must use the same version and date. Follow the [release checklist](RELEASE_CHECKLIST.md) for local installs, public downloads and separately managed account copies.
 
 See [test cases](tests.md), [validation record](VALIDATION.md), [source and licence notes](THIRD_PARTY.md), [contribution guide](CONTRIBUTING.md) and [changelog](CHANGELOG.md). Contributions are welcome through Issues and pull requests; no prompts or usage data are sent automatically.
 

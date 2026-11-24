@@ -1,0 +1,24 @@
+{
+  "version": "0.7.4",
+  "release_date": "2026-11-24",
+  "editions": {
+    "codex": {
+      "edition": "Codex",
+      "archive": "prompt-adviser-codex.zip",
+      "archive_sha256": "8aec50fe828fe6c731d40e94822872411f395be7f14f8f476550301be235c724",
+      "skill_sha256": "79fa7583d74c453a02ebb178c5ae505e9b533af876c315b12a21d743c0b9c5e4"
+    },
+    "claude": {
+      "edition": "Claude",
+      "archive": "prompt-adviser-claude.zip",
+      "archive_sha256": "4bc9ac816f2591056871ac43447cbb8249926a5a26ea175cdb8fa6fa27f9c23c",
+      "skill_sha256": "c27beec0713e5f5e356b09446407c817d06731837a0cf9db19a5c097cd15c2a3"
+    },
+    "antigravity": {
+      "edition": "Google Antigravity",
+      "archive": "prompt-adviser-antigravity.zip",
+      "archive_sha256": "8f465be75f25bac141222f77dac21ca190f48aa9b99b453576dfb95751f0431f",
+      "skill_sha256": "00e36a4496b37de30bac8525871bd466dd9c11b8a6bd3ef949886f7f84a99653"
+    }
+  }
+}

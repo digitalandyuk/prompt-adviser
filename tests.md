@@ -43,3 +43,8 @@ Run `python3 evaluation/questioning.py --output /tmp/prompt-adviser-questioning`
 - Use an invalid letter such as `1z`. The adviser identifies the missing/invalid answer and does not substitute a recommendation, invent a fact or execute the task.
 - Supply a written audience outside the menu, select **No role**, and finalise. The finished prompt preserves the custom audience and omits an invented persona.
 - Check that the first 80% response still reports the bounded source check, optional role including No role where useful, and optional/unnecessary Jev without adding a fourth material question.
+
+
+## 0.7.4 route regressions
+
+`evaluation/creation.py --output <directory>` exercises creation from context, explicit interactive review, strict prompt-only JSON, quoted instructions, genuinely missing task, missing review draft and shorthand 4a/4b across all three packaged editions through Codex. `evaluation/live_checkpoint.py --live --output <directory>` separately permits a public source lookup using a fictional task. Record host limitations and actual tool evidence; see the [0.7.4 report](evaluation/questioning-2026-11-24-074/REPORT.md).

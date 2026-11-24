@@ -5,6 +5,7 @@ from pathlib import Path
 from datetime import date
 import json
 import re
+import hashlib
 from zipfile import ZipFile
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -15,6 +16,10 @@ version = release["version"]
 assert re.fullmatch(r"\d+\.\d+\.\d+", version), "Invalid release version"
 release_date = date.fromisoformat(release["release_date"])
 release_label = f"Version {version} · Released {release_date.day} {release_date:%B %Y}"
+manifest = json.loads((ROOT / "dist/release-manifest.json").read_text())
+assert manifest["version"] == version and manifest["release_date"] == release_date.isoformat()
+editions = {"codex": "Codex", "claude": "Claude", "antigravity": "Google Antigravity"}
+assert set(manifest["editions"]) == set(editions)
 assert f"Current release: **{version}**, {release_date.day} {release_date:%B %Y}." in (ROOT / "README.md").read_text()
 assert (ROOT / "CHANGELOG.md").read_text().splitlines()[2] == f"## {version} — {release_date.isoformat()}"
 for platform in ("codex", "claude", "antigravity"):
@@ -22,7 +27,7 @@ for platform in ("codex", "claude", "antigravity"):
     skill = (folder / "SKILL.md").read_text()
     assert skill.startswith(f"---\nname: {NAME}\ndescription: ")
     assert "Only a direct user instruction to `Run this prompt`" in skill
-    assert "Always ask exactly three" in skill
+    assert "In a normal interactive review round, ask exactly three" in skill
     assert "4. Shall I ask more?" in skill
     assert "at least 80%" in skill
     assert "separate, directory-specific" in skill
@@ -37,12 +42,20 @@ for platform in ("codex", "claude", "antigravity"):
     assert f'metadata:\n  version: "{version}"\n  release_date: "{release_date.isoformat()}"' in skill
     assert skill.count(release_label) == 1
     assert f"# Prompt Adviser\n\n{release_label}\n" in skill
-    assert shared_body in skill.replace("\n" + release_label + "\n", "")
+    assert f'  edition: "{editions[platform]}"' in skill
+    identity = release_label + f"\nEdition: {editions[platform]}"
+    assert shared_body in skill.replace("\n" + identity + "\n", "")
+    assert (folder / "references/workflow-prompts.md").is_file()
+    published = manifest["editions"][platform]
+    assert published["edition"] == editions[platform]
+    assert published["skill_sha256"] == hashlib.sha256((folder / "SKILL.md").read_bytes()).hexdigest()
     assert (ROOT / f"src/platform-{platform}.md").read_text() in skill
     for reference in (ROOT / "references").iterdir():
         assert (folder / "references" / reference.name).read_bytes() == reference.read_bytes()
     compile((folder / "integrations/jev_openrouter.py").read_text(), "jev_openrouter.py", "exec")
     archive = ROOT / "dist" / f"{NAME}-{platform}.zip"
+    assert published["archive"] == archive.name
+    assert published["archive_sha256"] == hashlib.sha256(archive.read_bytes()).hexdigest()
     with ZipFile(archive) as zf:
         assert zf.testzip() is None
         names = set(zf.namelist())

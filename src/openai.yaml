@@ -1,7 +1,7 @@
 interface:
   display_name: "Prompt Adviser"
-  short_description: "Improve prompts, model fit and tool execution plans"
-  default_prompt: "Use $prompt-adviser to review my ChatGPT, OpenAI or Codex draft. Ask three score-led questions plus 'Shall I ask more?' and put the copyable prompt last."
+  short_description: "Create and improve prompts and reusable workflows"
+  default_prompt: "Use $prompt-adviser to create or review my prompt from a draft, brief or our conversation, clarify material gaps and put the finished prompt last."
 
 policy:
   allow_implicit_invocation: true

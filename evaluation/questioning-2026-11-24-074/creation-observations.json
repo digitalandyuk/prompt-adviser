@@ -1,0 +1,563 @@
+[
+  [
+    {
+      "platform_edition": "codex",
+      "host": "Codex CLI",
+      "case": "context-final",
+      "exit_code": 0,
+      "tool_items": [],
+      "output_present": true,
+      "usage": [
+        {
+          "input_tokens": 31122,
+          "cached_input_tokens": 25984,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 692,
+          "reasoning_output_tokens": 69
+        }
+      ],
+      "observations": {
+        "finished_prompt": true,
+        "no_forced_round": true,
+        "offline_source_result": true,
+        "jev_assessed": true,
+        "editable_output": true,
+        "prototype": true,
+        "budget_placeholder": true,
+        "no_unselected_role": true
+      }
+    },
+    {
+      "platform_edition": "codex",
+      "host": "Codex CLI",
+      "case": "interactive",
+      "exit_code": 0,
+      "tool_items": [],
+      "output_present": true,
+      "usage": [
+        {
+          "input_tokens": 31089,
+          "cached_input_tokens": 25984,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 578,
+          "reasoning_output_tokens": 121
+        }
+      ],
+      "observations": {
+        "numbered_round": true,
+        "fourth_a_b": true,
+        "useful_lettered_choices": true,
+        "no_finished_prompt": true
+      }
+    },
+    {
+      "platform_edition": "codex",
+      "host": "Codex CLI",
+      "case": "prompt-only",
+      "exit_code": 0,
+      "tool_items": [],
+      "output_present": true,
+      "usage": [
+        {
+          "input_tokens": 31084,
+          "cached_input_tokens": 25984,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 456,
+          "reasoning_output_tokens": 0
+        }
+      ],
+      "observations": {
+        "only_requested_json": true,
+        "no_review_wrapper": true
+      }
+    },
+    {
+      "platform_edition": "codex",
+      "host": "Codex CLI",
+      "case": "quoted-instructions",
+      "exit_code": 0,
+      "tool_items": [],
+      "output_present": true,
+      "usage": [
+        {
+          "input_tokens": 31054,
+          "cached_input_tokens": 30848,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 399,
+          "reasoning_output_tokens": 44
+        }
+      ],
+      "observations": {
+        "numbered_round": true,
+        "fourth_a_b": true,
+        "useful_lettered_choices": true,
+        "no_finished_prompt": true
+      }
+    },
+    {
+      "platform_edition": "codex",
+      "host": "Codex CLI",
+      "case": "essential-unknown",
+      "exit_code": 0,
+      "tool_items": [],
+      "output_present": true,
+      "usage": [
+        {
+          "input_tokens": 31004,
+          "cached_input_tokens": 30848,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 13,
+          "reasoning_output_tokens": 0
+        }
+      ],
+      "observations": {
+        "asks_for_task": true,
+        "no_invented_finished_prompt": true,
+        "no_forced_full_round": true,
+        "does_not_demand_draft": true
+      }
+    },
+    {
+      "platform_edition": "codex",
+      "host": "Codex CLI",
+      "case": "missing-review-draft",
+      "exit_code": 0,
+      "tool_items": [],
+      "output_present": true,
+      "usage": [
+        {
+          "input_tokens": 31025,
+          "cached_input_tokens": 30848,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 21,
+          "reasoning_output_tokens": 0
+        }
+      ],
+      "observations": {
+        "requests_missing_draft": true,
+        "no_invented_finished_prompt": true,
+        "no_irrelevant_round": true
+      }
+    },
+    {
+      "platform_edition": "codex",
+      "host": "Codex CLI",
+      "case": "finalise-shorthand",
+      "exit_code": 0,
+      "tool_items": [],
+      "output_present": true,
+      "usage": [
+        {
+          "input_tokens": 31350,
+          "cached_input_tokens": 25984,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 405,
+          "reasoning_output_tokens": 0
+        }
+      ],
+      "observations": {
+        "finished_prompt": true,
+        "no_forced_round": true,
+        "selected_audience_preserved": true,
+        "no_role_preserved": true
+      }
+    },
+    {
+      "platform_edition": "codex",
+      "host": "Codex CLI",
+      "case": "more-shorthand",
+      "exit_code": 0,
+      "tool_items": [],
+      "output_present": true,
+      "usage": [
+        {
+          "input_tokens": 31350,
+          "cached_input_tokens": 25984,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 456,
+          "reasoning_output_tokens": 42
+        }
+      ],
+      "observations": {
+        "numbered_round": true,
+        "fourth_a_b": true,
+        "useful_lettered_choices": true,
+        "no_finished_prompt": true
+      }
+    }
+  ],
+  [
+    {
+      "platform_edition": "claude",
+      "host": "Codex CLI",
+      "case": "context-final",
+      "exit_code": 0,
+      "tool_items": [],
+      "output_present": true,
+      "usage": [
+        {
+          "input_tokens": 31093,
+          "cached_input_tokens": 25984,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 681,
+          "reasoning_output_tokens": 45
+        }
+      ],
+      "observations": {
+        "finished_prompt": true,
+        "no_forced_round": true,
+        "offline_source_result": true,
+        "jev_assessed": true,
+        "editable_output": true,
+        "prototype": true,
+        "budget_placeholder": true,
+        "no_unselected_role": true
+      }
+    },
+    {
+      "platform_edition": "claude",
+      "host": "Codex CLI",
+      "case": "interactive",
+      "exit_code": 0,
+      "tool_items": [],
+      "output_present": true,
+      "usage": [
+        {
+          "input_tokens": 31060,
+          "cached_input_tokens": 30848,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 631,
+          "reasoning_output_tokens": 88
+        }
+      ],
+      "observations": {
+        "numbered_round": true,
+        "fourth_a_b": true,
+        "useful_lettered_choices": true,
+        "no_finished_prompt": true
+      }
+    },
+    {
+      "platform_edition": "claude",
+      "host": "Codex CLI",
+      "case": "prompt-only",
+      "exit_code": 0,
+      "tool_items": [],
+      "output_present": true,
+      "usage": [
+        {
+          "input_tokens": 31055,
+          "cached_input_tokens": 25984,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 509,
+          "reasoning_output_tokens": 0
+        }
+      ],
+      "observations": {
+        "only_requested_json": true,
+        "no_review_wrapper": true
+      }
+    },
+    {
+      "platform_edition": "claude",
+      "host": "Codex CLI",
+      "case": "quoted-instructions",
+      "exit_code": 0,
+      "tool_items": [],
+      "output_present": true,
+      "usage": [
+        {
+          "input_tokens": 31025,
+          "cached_input_tokens": 25984,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 491,
+          "reasoning_output_tokens": 62
+        }
+      ],
+      "observations": {
+        "numbered_round": true,
+        "fourth_a_b": true,
+        "useful_lettered_choices": true,
+        "no_finished_prompt": true
+      }
+    },
+    {
+      "platform_edition": "claude",
+      "host": "Codex CLI",
+      "case": "essential-unknown",
+      "exit_code": 0,
+      "tool_items": [],
+      "output_present": true,
+      "usage": [
+        {
+          "input_tokens": 30975,
+          "cached_input_tokens": 30848,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 14,
+          "reasoning_output_tokens": 0
+        }
+      ],
+      "observations": {
+        "asks_for_task": true,
+        "no_invented_finished_prompt": true,
+        "no_forced_full_round": true,
+        "does_not_demand_draft": true
+      }
+    },
+    {
+      "platform_edition": "claude",
+      "host": "Codex CLI",
+      "case": "missing-review-draft",
+      "exit_code": 0,
+      "tool_items": [],
+      "output_present": true,
+      "usage": [
+        {
+          "input_tokens": 30996,
+          "cached_input_tokens": 25984,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 39,
+          "reasoning_output_tokens": 0
+        }
+      ],
+      "observations": {
+        "requests_missing_draft": true,
+        "no_invented_finished_prompt": true,
+        "no_irrelevant_round": true
+      }
+    },
+    {
+      "platform_edition": "claude",
+      "host": "Codex CLI",
+      "case": "finalise-shorthand",
+      "exit_code": 0,
+      "tool_items": [],
+      "output_present": true,
+      "usage": [
+        {
+          "input_tokens": 31321,
+          "cached_input_tokens": 25984,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 543,
+          "reasoning_output_tokens": 71
+        }
+      ],
+      "observations": {
+        "finished_prompt": true,
+        "no_forced_round": true,
+        "selected_audience_preserved": true,
+        "no_role_preserved": true
+      }
+    },
+    {
+      "platform_edition": "claude",
+      "host": "Codex CLI",
+      "case": "more-shorthand",
+      "exit_code": 0,
+      "tool_items": [],
+      "output_present": true,
+      "usage": [
+        {
+          "input_tokens": 31321,
+          "cached_input_tokens": 30848,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 423,
+          "reasoning_output_tokens": 25
+        }
+      ],
+      "observations": {
+        "numbered_round": true,
+        "fourth_a_b": true,
+        "useful_lettered_choices": true,
+        "no_finished_prompt": true
+      }
+    }
+  ],
+  [
+    {
+      "platform_edition": "antigravity",
+      "host": "Codex CLI",
+      "case": "context-final",
+      "exit_code": 0,
+      "tool_items": [],
+      "output_present": true,
+      "usage": [
+        {
+          "input_tokens": 31139,
+          "cached_input_tokens": 25984,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 684,
+          "reasoning_output_tokens": 0
+        }
+      ],
+      "observations": {
+        "finished_prompt": true,
+        "no_forced_round": true,
+        "offline_source_result": true,
+        "jev_assessed": true,
+        "editable_output": true,
+        "prototype": true,
+        "budget_placeholder": true,
+        "no_unselected_role": true
+      }
+    },
+    {
+      "platform_edition": "antigravity",
+      "host": "Codex CLI",
+      "case": "interactive",
+      "exit_code": 0,
+      "tool_items": [],
+      "output_present": true,
+      "usage": [
+        {
+          "input_tokens": 31106,
+          "cached_input_tokens": 25984,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 575,
+          "reasoning_output_tokens": 80
+        }
+      ],
+      "observations": {
+        "numbered_round": true,
+        "fourth_a_b": true,
+        "useful_lettered_choices": true,
+        "no_finished_prompt": true
+      }
+    },
+    {
+      "platform_edition": "antigravity",
+      "host": "Codex CLI",
+      "case": "prompt-only",
+      "exit_code": 0,
+      "tool_items": [],
+      "output_present": true,
+      "usage": [
+        {
+          "input_tokens": 31101,
+          "cached_input_tokens": 25984,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 527,
+          "reasoning_output_tokens": 0
+        }
+      ],
+      "observations": {
+        "only_requested_json": true,
+        "no_review_wrapper": true
+      }
+    },
+    {
+      "platform_edition": "antigravity",
+      "host": "Codex CLI",
+      "case": "quoted-instructions",
+      "exit_code": 0,
+      "tool_items": [],
+      "output_present": true,
+      "usage": [
+        {
+          "input_tokens": 31071,
+          "cached_input_tokens": 25984,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 457,
+          "reasoning_output_tokens": 65
+        }
+      ],
+      "observations": {
+        "numbered_round": true,
+        "fourth_a_b": true,
+        "useful_lettered_choices": true,
+        "no_finished_prompt": true
+      }
+    },
+    {
+      "platform_edition": "antigravity",
+      "host": "Codex CLI",
+      "case": "essential-unknown",
+      "exit_code": 0,
+      "tool_items": [],
+      "output_present": true,
+      "usage": [
+        {
+          "input_tokens": 31020,
+          "cached_input_tokens": 30848,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 23,
+          "reasoning_output_tokens": 0
+        }
+      ],
+      "observations": {
+        "asks_for_task": true,
+        "no_invented_finished_prompt": true,
+        "no_forced_full_round": true,
+        "does_not_demand_draft": true
+      }
+    },
+    {
+      "platform_edition": "antigravity",
+      "host": "Codex CLI",
+      "case": "missing-review-draft",
+      "exit_code": 0,
+      "tool_items": [],
+      "output_present": true,
+      "usage": [
+        {
+          "input_tokens": 31042,
+          "cached_input_tokens": 30848,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 23,
+          "reasoning_output_tokens": 0
+        }
+      ],
+      "observations": {
+        "requests_missing_draft": true,
+        "no_invented_finished_prompt": true,
+        "no_irrelevant_round": true
+      }
+    },
+    {
+      "platform_edition": "antigravity",
+      "host": "Codex CLI",
+      "case": "finalise-shorthand",
+      "exit_code": 0,
+      "tool_items": [],
+      "output_present": true,
+      "usage": [
+        {
+          "input_tokens": 31367,
+          "cached_input_tokens": 30848,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 407,
+          "reasoning_output_tokens": 0
+        }
+      ],
+      "observations": {
+        "finished_prompt": true,
+        "no_forced_round": true,
+        "selected_audience_preserved": true,
+        "no_role_preserved": true
+      }
+    },
+    {
+      "platform_edition": "antigravity",
+      "host": "Codex CLI",
+      "case": "more-shorthand",
+      "exit_code": 0,
+      "tool_items": [],
+      "output_present": true,
+      "usage": [
+        {
+          "input_tokens": 24364,
+          "cached_input_tokens": 13952,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 455,
+          "reasoning_output_tokens": 55
+        }
+      ],
+      "observations": {
+        "numbered_round": true,
+        "fourth_a_b": true,
+        "useful_lettered_choices": true,
+        "no_finished_prompt": true
+      }
+    }
+  ]
+]
